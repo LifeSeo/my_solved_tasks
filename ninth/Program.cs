@@ -8,7 +8,7 @@ float count = 0;
 float distance = 10000000;
 float firstFriendSpeed = 1;
 float secondFriendSpeed = 2;
-float dogSpeed = 5;
+float dogSpeed = 50;
 float friend = 2;
 float time = 0;
 
@@ -19,16 +19,16 @@ while(distance > 10)
     {
         time = distance / (firstFriendSpeed + dogSpeed);
         friend = 2;
-        distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
-        count++;
+        
     }
     else
     {
         time = distance / (secondFriendSpeed + dogSpeed);
         friend = 1;
-        distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
-        count++;
+       
     }
+    distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
+    count++;
 }
 Console.WriteLine($"Собака пробежит: {count} раз");
   }
