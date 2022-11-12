@@ -1,12 +1,12 @@
-﻿// Заполнить массив рандомно целыми числами, вывести номер индекса и значения каждого элемента.
+﻿// Заполнить массив рандомно целыми числами, вывести номер индекса,
+// значения каждого элемента
 
 int[] array = new int[9];
-Random rand = new Random();
+Random num = new Random();
 
-for (int x = 0; x < array.Length; x++)
+for (int index = 0; index < array.Length; index++)
 {
-    array[x] = rand.Next(99);
-    Array.Sort(array);
-
-    Console.WriteLine("Индекс элемента массива " + x + " Число в массиве = " + array[x]);
+    array[index] = num.Next(99);
+    Console.WriteLine("Индекс элемента массива " + index + " Число в массиве = " + array[index]);
+    
 }
