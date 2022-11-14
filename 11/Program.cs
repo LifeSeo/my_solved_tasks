@@ -14,6 +14,11 @@ if (a < b)
     Console.WriteLine($"Большее число: {b}");
     Console.WriteLine($"Меньшее число: {a}");
 }
+if (a == b)
+{
+    Console.WriteLine($"Число {a} = {b}");
+    
+}
 else
 {
     Console.WriteLine($"Большее число: {a}");
