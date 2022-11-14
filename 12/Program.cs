@@ -10,9 +10,8 @@ Console.WriteLine("Введите второе число: ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите первое число: ");
 int c = Convert.ToInt32(Console.ReadLine());
-int max = 0;
+int max = int.MinValue;
 
-if (max < a) max = a;
 if (max < b) max = b;
 if (max < c) max = c;
 
