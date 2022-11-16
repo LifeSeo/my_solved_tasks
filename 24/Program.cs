@@ -11,7 +11,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 bool Result(int number)
 {
-    return number % 7 == 0 && number % 23 == 0;
+    return number % 7 == 0 || number % 23 == 0;
 }
 
 Console.WriteLine(Result(number) ? "Да" : "Нет");
