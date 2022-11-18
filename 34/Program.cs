@@ -16,7 +16,7 @@ bool Palindrom()
     int num4 = number % 10000 / 1000;
     int num5 = number / 10000;
 
-    return (num1 == num5 || num2 == num4);
+    return (num1 == num5 && num2 == num4);
 
 }
 Console.WriteLine(Palindrom() ? "Данное число палиндромом" : "Число не является палиндромом");
