@@ -6,10 +6,11 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Введите трехзначное число: ");
+Console.WriteLine("Введите трехзначное число: 857585 ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int result = number / 10 % 10;
+
 
 Console.Write("Вторая цифра: ");
 Console.WriteLine(result);
