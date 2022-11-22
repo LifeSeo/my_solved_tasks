@@ -8,6 +8,8 @@
 Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+// 12345
+
 bool Palindrom()
 {
     int num1 = number % 10;

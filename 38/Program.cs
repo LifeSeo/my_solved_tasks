@@ -5,6 +5,9 @@ Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 string strNumber = Convert.ToString(number);
 
+// 12345
+
+
 bool StrNumber(string num)
 {
 return strNumber[0] == strNumber[4] && strNumber[1] == strNumber[3];
