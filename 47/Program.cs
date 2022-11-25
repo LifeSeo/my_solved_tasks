@@ -8,8 +8,6 @@
 // выражение Convert.ToDecimal(Console.ReadLine())
 // (сумма вклада будет представлять тип decimal)
 
-using System;
-
 
 Console.WriteLine("Введите сумму вклада: ");
 decimal summa = Convert.ToDecimal(Console.ReadLine());
