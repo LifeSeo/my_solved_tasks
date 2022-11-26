@@ -28,19 +28,19 @@ void ArrowPrint(int[] arr)
     Console.Write("]");
 }
 Console.Write("Выводим массив на печать ----> ");
-int[] array = NewArrowRandom(10, 10, 999);
+int[] array = NewArrowRandom(10, 0, 9);
 ArrowPrint(array);
 
-int OddNumber(int[] arr)
+int OddElements(int[] arr)
 {
     int result = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-    if (arr[i] % 2 == 1)
+    if (i % 2 == 1)
     result += arr[i];
     }
     return result;
 }
 
-int oddNumber = OddNumber(array);
+int oddNumber = OddElements(array);
 Console.WriteLine($" Сумма нечетных элементов массива равна ----> {oddNumber}");
