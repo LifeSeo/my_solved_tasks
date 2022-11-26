@@ -4,15 +4,6 @@
 // б) порядкового номера человека, получившего наименьшую зарплату;
 // в) средней зарплаты по отделу
 
-Console.WriteLine("Выводим все зарплаты сотрудников: ");
-int[] arr = NewRandomMassiv(15, 1000, 10000);
-ArrayPrint(arr);
-int amount = FullAmount(arr);
-Console.WriteLine($"Общая сумма всех зарплат -----> {amount}");
-int midAmount = MiddleAmount(amount);
-Console.WriteLine($"Средняя зарплата -----> {midAmount}");
-int minSolario = MinSolario(arr);
-Console.WriteLine($"Минимальная зарплата -----> {minSolario}");
 
 int[] NewRandomMassiv(int size, int min, int max)
 {
@@ -49,8 +40,9 @@ int FullAmount(int[] arr)
     return resultAmount;
 }
 
-int MiddleAmount(int middleAmount)
+int MiddleAmount(int[] arr)
 {
+    int amount = FullAmount(arr);
     int midAmount = amount / arr.Length + 1;
     return midAmount;
 }
@@ -65,9 +57,10 @@ int MinSolario(int[] arr)
     return minSolario;
 }
 
-int MinSolarioElement(int minElement)
+int MinSolarioElement(int[] arr)
 {
     int minResultElement = 0;
+    int minSolario = MinSolario(arr);
     for (int i = 0; i < arr.Length; i++)
     {
         if (minSolario == arr[i]) minResultElement = i;
@@ -75,6 +68,14 @@ int MinSolarioElement(int minElement)
     return minResultElement;
 }
 
-int minResultElement = MinSolarioElement(minSolario);
-
-Console.WriteLine($"Порядковый номер елемента с минимальной зарплатой -----> {minResultElement}");
+Console.WriteLine("Выводим все зарплаты сотрудников: ");
+int[] arr = NewRandomMassiv(15, 1000, 10000);
+ArrayPrint(arr);
+int amount = FullAmount(arr);
+Console.WriteLine($"Общая сумма всех зарплат -----> {amount}");
+int midAmount = MiddleAmount(arr);
+Console.WriteLine($"Средняя зарплата -----> {midAmount}");
+int minSolario = MinSolario(arr);
+Console.WriteLine($"Минимальная зарплата -----> {minSolario}");
+int minResultElement = MinSolarioElement(arr);
+Console.WriteLine($"Порядковый номер элемента с минимальной зарплатой -----> {minResultElement}");
