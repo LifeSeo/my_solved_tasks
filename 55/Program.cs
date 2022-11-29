@@ -52,4 +52,5 @@ return minNumber;
 double differenceMax = MaxDifference(array);
 double differenceMin = MinDifference(array);
 double result = differenceMax - differenceMin;
-Console.Write($"Разницу между максимальным и минимальным элементами массива ---> {Math.Round(result, 2)}");
+Console.Write(@$"Разницу между максимальным и минимальным элементами массива --->
+{Math.Round(result, 2)}");
