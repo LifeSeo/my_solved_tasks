@@ -36,5 +36,5 @@ void PrintMatrix (double[,] matrix)
     }
 }
 
-double[,] matrixArray = GreatMatrixRndDouble(5, 9, 1, 119);
+double[,] matrixArray = GreatMatrixRndDouble(5, 9, 1.5, 1.19);
 PrintMatrix(matrixArray);
