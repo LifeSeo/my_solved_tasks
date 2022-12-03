@@ -1,4 +1,4 @@
-﻿// Домашняя работы. Задача 52. Задайте двумерный массив из целых чисел.
+﻿// Домашняя работы. Задача 52. Вывод через массив. Задайте двумерный массив из целых чисел.
 // Найдите среднее арифметическое элементов в каждом столбце.
 // Например, задан массив:
 // 1 4 7 2
@@ -37,20 +37,35 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void ArithmeticMean(int[,] matrix)
+double[] ArithmeticMean(int[,] matrix)
 {
+    double[] ArithmeticMeanNewMassiv = new double[matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         double summaArithmeticMean = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-           summaArithmeticMean += matrix[i, j];
+            summaArithmeticMean += matrix[i, j];
         }
-double resultMathRound = Math.Round(summaArithmeticMean / matrix.GetLength(0), 2);
-Console.Write($"Среднее арифметическое столбца {j} ----> {resultMathRound} ");
+        ArithmeticMeanNewMassiv[j] = Math.Round(summaArithmeticMean / matrix.GetLength(0), 2);
     }
+    return ArithmeticMeanNewMassiv;
 }
 
-int[,] creatMatrixRndInt = CreateMatrixRndInt(10, 13, 1, 5);
+void PrintArray(double[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
+    }
+    Console.WriteLine("]");
+}
+
+
+int[,] creatMatrixRndInt = CreateMatrixRndInt(3, 3, 1, 5);
 PrintMatrix(creatMatrixRndInt);
-ArithmeticMean(creatMatrixRndInt);
+double[] array = ArithmeticMean(creatMatrixRndInt);
+Console.Write("Среднее арифметическое элементов в столбцах: ");
+PrintArray(array);
