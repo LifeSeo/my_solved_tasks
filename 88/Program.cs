@@ -1,18 +1,17 @@
-﻿// Задача 66. Домашняя работа. Задайте значения M и N. Напишите программу,
-// которая найдёт сумму натуральных элементов в промежутке от M до N.
-// Выполнить с помощью рекурсии
-// M = 1; N = 15 -> 120
-// M = 4; N = 8. -> 30
+﻿// Задача 68: Напишите программу вычисления функции
+// Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
 
-Console.WriteLine("Введите натуральное число M: ");
+Console.WriteLine("Введите неотрицательное число M: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите натуральное число N: ");
+Console.WriteLine("Введите неотрицательное число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(SummaDigits(m, n));
+Console.WriteLine(FunctionAkkerman(m, n));
 
-int SummaDigits(int num1, int num2)
+int FunctionAkkerman(int m, int n)
 {
-    if (num1 == num2) return num1;
-    else if (num1 < num2) return num2 + SummaDigits(num1, num2 - 1);
-    else return num2 + SummaDigits(num1, num2 + 1);
+    if (m == 0) return n + 1;
+    else if (m > 0 && n == 0) return FunctionAkkerman(m - 1, 1);
+    else return FunctionAkkerman(m - 1, FunctionAkkerman(m, n - 1));
 }
