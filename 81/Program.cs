@@ -84,7 +84,7 @@ void ArrayAllPrint(int[] arr)
     return (matrix2, indexI, indexJ, indexK);
 }
 
-int[] array = ConvertMatrixToArray(2, 2, 2, 10, 99);
+int[] array = ConvertMatrixToArray(3, 3, 3, 10, 99);
 Console.WriteLine(@"Задаем одномерный массив с уникальными элементами 
 для дальнейшего конверта в трехмерную матрицу");
 Console.WriteLine();
