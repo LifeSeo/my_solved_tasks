@@ -1,5 +1,5 @@
-﻿int number = new Random().Next(10, 100);
-Console.WriteLine($"Случйное число из отрезка 10 - 99 --> {number}");
+int number = new Random().Next(10, 100);
+Console.WriteLine($"Случайное число из отрезка 10 - 99 --> {number}");
 
 int MaxDigit(int num) // int num = number
 {
