@@ -1,4 +1,4 @@
-﻿// int n = 12345;
+// int n = 12345;
 // double res = Math.Sqrt(n);
 
 // double n1 = 5.099985645;
