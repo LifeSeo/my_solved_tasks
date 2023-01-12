@@ -1,4 +1,6 @@
-﻿double[] CreateArrayRndDouble(int size, int min, int max)
+# Задаем рандомный массив
+
+double[] CreateArrayRndDouble(int size, int min, int max)
 {
     double[] arr = new double[size];
     Random rnd = new Random();
