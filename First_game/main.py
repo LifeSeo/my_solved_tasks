@@ -39,6 +39,11 @@ bg_sound = pygame.mixer.Sound('First_game/sounds/bg.mp3')
 bg_sound.play(loops= -1)
 volume = 1.0
 
+player_speed = 5
+player_x = 150
+player_y = 220
+is_jump = False
+jump_count = 7
 running = True
 while running:
     
@@ -47,7 +52,33 @@ while running:
     # screen.blit(back_ground, (0, 0))
     screen.blit(back_ground, (bg_second, 0))
     screen.blit(back_ground, (bg_second + 618, 0))
-    screen.blit(walk_right[player_anime_count], (300, 220))
+    
+    keys = pygame.key.get_pressed()
+    
+    if keys[pygame.K_LEFT]:
+        screen.blit(walk_left[player_anime_count], (player_x, player_y))
+    else:
+        screen.blit(walk_right[player_anime_count], (player_x, player_y))
+        
+    if keys[pygame.K_LEFT] and player_x > 50:
+        player_x -= player_speed
+    elif keys[pygame.K_RIGHT] and player_x < 200:
+        player_x += player_speed
+    
+    if not is_jump:
+        if keys[pygame.K_SPACE]:
+            is_jump = True
+    else:
+        if jump_count >= -7:
+            if jump_count > 0:
+                player_y -= (jump_count ** 2) / 2
+            else:
+                player_y += (jump_count ** 2) / 2
+            jump_count -= 1
+        else:
+            is_jump = False
+            jump_count = 7
+    
     if player_anime_count == 3:
         player_anime_count = 0
     else:
