@@ -1,10 +1,12 @@
 import pygame
 
+image_path = "/data/data/org.test.myapp/files/app/"
+
 clock = pygame.time.Clock()
 pygame.init()
 screen = pygame.display.set_mode((618, 359))
 pygame.display.set_caption("Моя первая игрушка на Python")
-icon = pygame.image.load("First_game/images/icon.png").convert_alpha()
+icon = pygame.image.load(image_path + "images/icon.png").convert_alpha()
 pygame.display.set_icon(icon)
 
 # squire = pygame.Surface((50, 170))
@@ -14,39 +16,39 @@ pygame.display.set_icon(icon)
 # text_surface = my_font.render("Game", True, "Green")
 
 # player = pygame.image.load("First_game/images/golf.png")
-back_ground = pygame.image.load(
-    "First_game/images/fon_background.jpg").convert_alpha()
+back_ground = pygame.image.load(image_path + 
+                                "images/fon_background.jpg").convert_alpha()
 
 # player = pygame.image.load('First_game/images/animation/left_person/left_1.png')
 
 walk_left = [
-    pygame.image.load(
-        'First_game/images/animation/left_person/left_1.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/left_person/left_2.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/left_person/left_3.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/left_person/left_4.png').convert_alpha()
+    pygame.image.load(image_path + 
+                      'images/animation/left_person/left_1.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/left_person/left_2.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/left_person/left_3.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/left_person/left_4.png').convert_alpha()
 ]
 
 walk_right = [
-    pygame.image.load(
-        'First_game/images/animation/right_person/right_1.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/right_person/right_2.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/right_person/right_3.png').convert_alpha(),
-    pygame.image.load(
-        'First_game/images/animation/right_person/right_4.png').convert_alpha()
+    pygame.image.load(image_path + 
+                      'images/animation/right_person/right_1.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/right_person/right_2.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/right_person/right_3.png').convert_alpha(),
+    pygame.image.load(image_path + 
+                      'images/animation/right_person/right_4.png').convert_alpha()
 ]
 
-ghost = pygame.image.load("First_game/images/ghost.png").convert_alpha()
+ghost = pygame.image.load(image_path + "images/ghost.png").convert_alpha()
 # ghost_x = 620
 player_anime_count = 0
 bg_second = 0
 
-bg_sound = pygame.mixer.Sound('First_game/sounds/bg.mp3')
+bg_sound = pygame.mixer.Sound(image_path + 'sounds/bg.mp3')
 bg_sound.play(loops=-1)
 volume = 1.0
 
@@ -54,10 +56,14 @@ ghost_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(ghost_timer, 2500)
 ghost_list_in_game = []
 
-label = pygame.font.Font("First_game/fonts/Oswald.ttf", 40)
+label = pygame.font.Font(image_path + "fonts/Oswald.ttf", 40)
 lose_label = label.render("Вы проиграли (:- !", True, (193, 196, 199))
 restart_label = label.render("Играть заного", True, (115, 132, 148))
 restart_label_rect = restart_label.get_rect(topleft=(180, 200))
+
+bullet = pygame.image.load(image_path + "images/bullet.png").convert_alpha()
+bullets = []
+bullets_max = 5
 
 player_speed = 5
 player_x = 150
@@ -128,6 +134,20 @@ while running:
         bg_second -= 2
         if bg_second == -618:
             bg_second = 0
+            
+        if bullets:
+            for (i, el) in enumerate(bullets):
+                screen.blit(bullet, (el.x, el.y))
+                el.x += 4
+                
+                if el.x > 630:
+                    bullets.pop(i)
+                    
+                if ghost_list_in_game:
+                    for (index, ghost_el) in enumerate(ghost_list_in_game):
+                        if el.colliderect(ghost_el):
+                            ghost_list_in_game.pop(index)
+                            bullets.pop(i)
 
     else:
         screen.fill((87, 88, 89))
@@ -139,6 +159,8 @@ while running:
             gameplay = True
             player_x = 150
             ghost_list_in_game.clear()
+            bullets.clear()
+            bullets_max = 5
         # screen.blit(player, (300, 220))
         # pygame.draw.circle(screen, "Blue", (250, 150), 30)
         # pygame.draw.circle(squire, "Blue", (10, 7), 5)
@@ -151,6 +173,11 @@ while running:
             pygame.quit()
         if even.type == ghost_timer:
             ghost_list_in_game.append(ghost.get_rect(topleft=(620, 230)))
+            
+        if gameplay and even.type == pygame.KEYUP and even.key == pygame.K_RSHIFT and bullets_max > 0:
+                bullets.append(bullet.get_rect(topleft=(player_x + 30, player_y + 10)))
+                bullets_max -= 1
+            
         elif even.type == pygame.KEYDOWN:
             if even.key == pygame.K_F1:
                 screen.fill((52, 134, 235))
@@ -164,5 +191,6 @@ while running:
                 volume += 0.1
                 bg_sound.set_volume(volume)
                 print(bg_sound.get_volume())
+    
 
     clock.tick(15)
