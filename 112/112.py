@@ -1,4 +1,4 @@
-# Метод быстрой сортировки по Хоара
+# Метод быстрой сортировки по Хоара.
 
 from random import randint
 import time
