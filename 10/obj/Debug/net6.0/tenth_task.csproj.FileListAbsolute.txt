@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\bin\Debug\net6.0\tenth_task.exe
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\bin\Debug\net6.0\tenth_task.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\bin\Debug\net6.0\tenth_task.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\bin\Debug\net6.0\tenth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\bin\Debug\net6.0\tenth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\refint\tenth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\tenth_task.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\tenth_task\obj\Debug\net6.0\ref\tenth_task.dll

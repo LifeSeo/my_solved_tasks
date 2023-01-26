@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\91\bin\Debug\net7.0\91.exe
+C:\Users\Chris\Desktop\my_solved_tasks\91\bin\Debug\net7.0\91.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\91\bin\Debug\net7.0\91.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\91\bin\Debug\net7.0\91.dll
+C:\Users\Chris\Desktop\my_solved_tasks\91\bin\Debug\net7.0\91.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.dll
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\refint\91.dll
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\91.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\91\obj\Debug\net7.0\ref\91.dll

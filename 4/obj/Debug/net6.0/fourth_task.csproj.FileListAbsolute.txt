@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\bin\Debug\net6.0\fourth_task.exe
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\bin\Debug\net6.0\fourth_task.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\bin\Debug\net6.0\fourth_task.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\bin\Debug\net6.0\fourth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\bin\Debug\net6.0\fourth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\refint\fourth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\fourth_task.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\fourth_task\obj\Debug\net6.0\ref\fourth_task.dll

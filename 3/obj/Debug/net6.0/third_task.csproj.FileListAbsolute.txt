@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\bin\Debug\net6.0\third_task.exe
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\bin\Debug\net6.0\third_task.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\bin\Debug\net6.0\third_task.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\bin\Debug\net6.0\third_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\bin\Debug\net6.0\third_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\refint\third_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\third_task.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\third_task\obj\Debug\net6.0\ref\third_task.dll

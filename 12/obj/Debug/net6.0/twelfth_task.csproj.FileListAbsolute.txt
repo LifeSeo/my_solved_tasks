@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\bin\Debug\net6.0\twelfth_task.exe
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\bin\Debug\net6.0\twelfth_task.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\bin\Debug\net6.0\twelfth_task.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\bin\Debug\net6.0\twelfth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\bin\Debug\net6.0\twelfth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\refint\twelfth_task.dll
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\twelfth_task.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\twelfth_task\obj\Debug\net6.0\ref\twelfth_task.dll

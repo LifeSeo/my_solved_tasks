@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\46\bin\Debug\net6.0\46.exe
+C:\Users\Chris\Desktop\my_solved_tasks\46\bin\Debug\net6.0\46.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\46\bin\Debug\net6.0\46.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\46\bin\Debug\net6.0\46.dll
+C:\Users\Chris\Desktop\my_solved_tasks\46\bin\Debug\net6.0\46.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.dll
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\refint\46.dll
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\46.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\46\obj\Debug\net6.0\ref\46.dll

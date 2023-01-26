@@ -28,7 +28,6 @@ start_time_2 = time.perf_counter()
 def sorting_list_bubble(list):
     for h in range(len(list)):
         for d in range(len(list) - 1):
-            min = list[d]
             if list[d] > list[d + 1]:
                 list[d], list[d + 1] = list[d + 1], list[d]
 

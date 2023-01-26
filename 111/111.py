@@ -5,7 +5,7 @@ from random import randint
 import time
 import multiprocessing
 
-size = 100
+size = 1000
 list = []
 
 for i in range(size):

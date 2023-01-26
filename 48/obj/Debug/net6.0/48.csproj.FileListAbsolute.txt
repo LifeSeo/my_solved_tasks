@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\my_solved_tasks\48\bin\Debug\net6.0\48.exe
+C:\Users\Chris\Desktop\my_solved_tasks\48\bin\Debug\net6.0\48.deps.json
+C:\Users\Chris\Desktop\my_solved_tasks\48\bin\Debug\net6.0\48.runtimeconfig.json
+C:\Users\Chris\Desktop\my_solved_tasks\48\bin\Debug\net6.0\48.dll
+C:\Users\Chris\Desktop\my_solved_tasks\48\bin\Debug\net6.0\48.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.csproj.AssemblyReference.cache
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.AssemblyInfoInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.AssemblyInfo.cs
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.dll
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\refint\48.dll
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.pdb
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\48.genruntimeconfig.cache
+C:\Users\Chris\Desktop\my_solved_tasks\48\obj\Debug\net6.0\ref\48.dll
