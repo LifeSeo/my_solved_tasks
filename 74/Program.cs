@@ -1,5 +1,5 @@
 // Дан двумерный массив. Определить какие элементы повторяются в строке
-// и вывести их в виде массива.
+// и вывести их в виде массива
 
 int[,] NewRndMatrix(int rows, int columns, int minElement, int maxElement)
 {
