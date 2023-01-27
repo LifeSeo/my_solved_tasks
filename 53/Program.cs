@@ -1,4 +1,4 @@
-# Задаем рандомный массив
+# Задаем рандомный массив.
 
 double[] CreateArrayRndDouble(int size, int min, int max)
 {
