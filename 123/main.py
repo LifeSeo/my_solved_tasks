@@ -12,8 +12,6 @@ def Integer():
                 return print(sum(map(int, str(number))))
             else:
                 print("Вы ввели НЕ трехзначное число!")
-                number = int(input("Введите трехзначное число: "))
-                
-    
+
 Integer()
 
