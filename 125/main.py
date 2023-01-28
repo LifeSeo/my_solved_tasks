@@ -8,26 +8,24 @@
 while True:
     try:
         number = int(input("Введите шестизначное число: "))
-        break
     except ValueError:
         number = print("Что за шутки? Введите число, а не буквы: ")
-
-def Integer(number):
-    while len(str(number)) != 6:
-        number = int(input("Введите шестизначное число, не пытайтесь обмануть компьютер: "))
     else:
-        return number
-            
+        if len(str(number)) != 6:
+            print("Нужно шестизначное число, не пытайтесь обмануть компьютер")
+        else:
+            break
+
 def CreateList(number):
     number_str = str(number)
     list = []
     for i in number_str:
         list.append(int(i))
     if list[0] + list[1] + list[2] == list[3] + list[4] + list[5]:
-        print("Ваш билет счастливый!")
+        print("Вот это удача! Ваш билет счастливый!")
     else:
-        print("Что ж, бывает. Билет не счастливый (((")
-        
-         
-Integer(number)
+        print(
+            "Что ж, бывает. Билет не счастливый, прокатитесь еще раз на трамвае (((")
+
+
 CreateList(number)
