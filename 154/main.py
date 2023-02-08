@@ -13,7 +13,7 @@ n = int(input("Введите количество чисел в ряду: "))
 
 start_time_1 = perf_counter()
 for i in range(n):
-    def fib(n): return 1 if n < 2 else fib(n-1) + fib(n-2)
+    fib = lambda n: 1 if n < 2 else fib(n-1) + fib(n-2)
 print(fib(i))
 end_time_1 = perf_counter()
 print(end_time_1 - start_time_1)
