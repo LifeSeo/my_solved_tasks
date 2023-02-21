@@ -6,6 +6,7 @@
 # только один раз.
 
 from random import randint as rnd
+from memory_profiler import memory_usage as mu
 
 binan_vector = list(map(lambda _: rnd(0, 1), range(10)))
 
@@ -22,3 +23,5 @@ for i in binan_vector:
             max = count
         count = 0
 print("Единица повторяется: ", max if max > count else count)
+
+print(mu())
