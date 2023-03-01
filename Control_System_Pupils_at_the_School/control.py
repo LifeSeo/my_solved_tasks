@@ -3,6 +3,7 @@ from add_pupils import add_pupil
 from find_pupil import pupil_find
 from del_pupil import pupil_del
 from modarate_pupil import pupil_moderate
+from table_pupils import pupils_table
 
 
 
@@ -16,5 +17,7 @@ def click_button():
         pupil_find(click)
     if click == 4:
         pupil_moderate(click)
+    if click == 5:
+        pupils_table(click)
     if click == 7:
         print("Такого пункта нет в меню")

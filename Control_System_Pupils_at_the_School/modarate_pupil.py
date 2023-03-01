@@ -9,7 +9,9 @@ def pupil_moderate(main_menu_choise):
             file.seek(0)
             for i in fl:
                 if data in i.lower():
-                    i = i.replace(data, data_change)
+                    i = i.lower().replace(data, data_change)
                     file.write(i)
                 else:
                     file.write(i)
+                
+                    
