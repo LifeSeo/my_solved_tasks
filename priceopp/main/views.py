@@ -2,4 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('Тест - мордочка сайта')
+    return render(request, 'main/index.html')
+
+def about(request):
+    return HttpResponse('<h4>Тест - О нас</h4>')
