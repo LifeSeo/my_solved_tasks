@@ -1,11 +1,27 @@
 {% extends 'main/layout.html' %}
 
 
-{% block title %}Главая страница{% endblock %}
+{% block title %} Find ur best price for {{values|random}} {% endblock %}
 
 {% block content %}
 
-<h1>Главная страница</h1>
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8">
+
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control" placeholder="Find something, example: {{values|random}}">
+          <button class="btn btn-primary">Search</button>
+        </div>
+        
+      </div>
+      
+    </div>
+</div>
+
 <p>Главная страница</p>
 {% include 'main/info.html' %}
 
