@@ -12,9 +12,10 @@
       <div class="col-md-8">
 
         <div class="search">
-          <i class="fa fa-search"></i>
-          <input type="text" class="form-control" placeholder="Find something, example: microwave NY">
-          <button class="btn btn-primary">Search</button>
+          {% for el in news %}
+  <h3><p>{{ el.title }}</p></h3>
+  <p>{{ el.anons }}</p>
+  {% endfor %}
         </div>
         
       </div>
@@ -22,7 +23,5 @@
     </div>
 </div>
 
-<p>Главная страница</p>
-{% include 'main/info.html' %}
 
 {% endblock %}
