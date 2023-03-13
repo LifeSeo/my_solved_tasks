@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price. Our reviews{% endblock %}
+
+{% block content %}
+
+<center><a href="{% url 'review_add' %}"><li><button type="button" class="btn btn-outline-secondary">Add Review</button></li><a></center><br>
+    <div class="reviews">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.title }}<br>
+                    {{ form.review }}<br>
+                    {{ form.date }}<br>
+                    {{ error }}
+                    <button class="btn btn-outline-secondary" type="submit">Submit comment</button>
+                </form>
+
+  </div>
+
+
+
+{% endblock %}

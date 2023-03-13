@@ -1,9 +1,10 @@
 {% extends 'main/layout.html' %}
 
-
-{% block title %} Find ur best price. Our news{% endblock %}
+{% block title %} Find ur best price. Our reviews{% endblock %}
 
 {% block content %}
+
+<center><a href="{% url 'review_add' %}"><li><button type="button" class="btn btn-outline-secondary">Add Review</button></li><a></center><br>
 
 <div class="container">
 
@@ -12,9 +13,11 @@
       <div class="col-md-8">
 
         <div class="search">
-          {% for el in news %}
+         
+          {% for el in reviews %}
   <h3><p>{{ el.title }}</p></h3>
-  <p>{{ el.anons }}</p>
+  <p>{{ el.review }}</p>
+  <p>{{ el.date }}</p>
   {% endfor %}
         </div> 
       </div> 

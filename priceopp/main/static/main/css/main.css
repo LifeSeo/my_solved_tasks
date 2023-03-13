@@ -123,7 +123,16 @@ main .container{
 
    }
 
-.news {
-    text-align: center;
-    color: rgb(248, 244, 244);
+.reviews{
+    width: 500px;
+    margin: 0 auto;
+ 
 }
+
+    .reviews button{
+        width: 151px;
+        height: 38px;
+        display:block;
+        margin: 0 auto;
+    }
+
