@@ -4,8 +4,17 @@
 
 {% block content %}
 
-<center><a href="{% url 'review_add' %}"><li><button type="button" class="btn btn-outline-secondary">Add Review</button></li><a></center><br>
+<div class="reviews">
+  <form action="" method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.review }}<br>
+        {{ form.date }}<br>
+        {{ error }}
+        <input type="submit" class="btn btn-outline-secondary" value="Submit comment" /><br>
+    </form>
 
+</div>
 <div class="container">
 
     <div class="row height d-flex justify-content-center align-items-center">

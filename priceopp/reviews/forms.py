@@ -9,7 +9,7 @@ class ReviewForm(ModelForm):
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Enter your email'
+                'placeholder': 'Enter your name'
             }),
             "review": Textarea(attrs={
                 'class': 'form-control',
@@ -17,6 +17,6 @@ class ReviewForm(ModelForm):
                 }),
             "date": DateTimeInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Enter date'
+                'placeholder': 'Enter date, (example: 15.02.1999)'
                 })
         }

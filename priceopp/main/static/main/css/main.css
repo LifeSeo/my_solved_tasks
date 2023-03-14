@@ -129,7 +129,7 @@ main .container{
  
 }
 
-    .reviews button{
+    .reviews submit{
         width: 151px;
         height: 38px;
         display:block;

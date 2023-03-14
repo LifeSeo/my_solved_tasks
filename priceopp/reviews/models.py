@@ -2,7 +2,7 @@ from django.db import models
 
 class Reviews(models.Model):
     title = models.CharField('Title', max_length=80)
-    review = models.TextField('Review')
+    review = models.TextField('Your review')
     date = models.DateTimeField('Publish Date')
     
     def __str__(self):
@@ -10,5 +10,5 @@ class Reviews(models.Model):
 
 
     class Meta:
-        verbose_name = 'Review'
-        verbose_name_plural = 'Reviews'
+        verbose_name = 'New'
+        verbose_name_plural = 'News'
