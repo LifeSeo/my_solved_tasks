@@ -1,7 +1,7 @@
 {% extends 'main/layout.html' %}
 
 
-{% block title %} Find ur best price for {{values|random}} {% endblock %}
+{% block title %} Find ur best price for }} {% endblock %}
 
 {% block content %}
 
@@ -13,15 +13,21 @@
 
         <div class="search">
           <i class="fa fa-search"></i>
-          <input type="text" class="form-control" placeholder="Find something, example: {{values|random}}">
+          <input type="text" class="form-control" placeholder="Find something, example: ">
           <button class="btn btn-primary">Search</button>
+          
         </div>
-        
+        <p>{{ info.city }}: {{ info.temp }} <sup>o</sup>  <img src="https://openweathermap.org/img/w/{{info.icon}}.png"  width="31" height="31" ></p><br>
+          
       </div>
       
     </div>
 </div>
-
+<div class="reviews">
+ 
+  
+</div>
+<div class="container">
 <p>Главная страница</p>
 {% include 'main/info.html' %}
 

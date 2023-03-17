@@ -81,6 +81,11 @@ main .container{
      
    }
 
+   .button{
+    text-align: right;
+    padding-right: 10px;
+   }
+
    .search input{
 
     height: 40px;
@@ -136,3 +141,11 @@ main .container{
         margin: 0 auto;
     }
 
+.fullarticle{
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+    h1 {
+        text-align:center;
+    }
