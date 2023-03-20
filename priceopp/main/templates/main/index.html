@@ -1,7 +1,8 @@
 {% extends 'main/layout.html' %}
 
 
-{% block title %} Find ur best price for }} {% endblock %}
+
+{% block title %} Find ur best price for {% lorem 2 w random %}  {% endblock %}
 
 {% block content %}
 
@@ -11,13 +12,13 @@
 
       <div class="col-md-8">
 
-        <div class="search">
-          <i class="fa fa-search"></i>
-          <input type="text" class="form-control" placeholder="Find something, example: ">
-          <button class="btn btn-primary">Search</button>
+        <script async src="https://cse.google.com/cse.js?cx=37ca4736e78264a95">
+        </script>
+        <div class="gcse-search"></div>
           
         </div>
-        <p>{{ info.city }}: {{ info.temp }} <sup>o</sup>  <img src="https://openweathermap.org/img/w/{{info.icon}}.png"  width="31" height="31" ></p><br>
+        
+        <p>{{ info.city }}: {{ info.temp }} <sup>o</sup>  <img src="https://openweathermap.org/img/w/{{info.icon}}.png"  width="31" height="31" > | Date: {% now "jS F Y H:i" %}</p><br>
           
       </div>
       
@@ -25,10 +26,7 @@
 </div>
 <div class="reviews">
  
-  
-</div>
+</div><br>
 <div class="container">
 <p>Главная страница</p>
-{% include 'main/info.html' %}
-
 {% endblock %}

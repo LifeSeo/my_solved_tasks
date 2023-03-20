@@ -3,9 +3,11 @@ from django.http import HttpResponse
 import requests
 from . import location
 
-object = location.Location()
-city = object.get_location()
-print(city)    
+def index(request):
+    data = {
+        'value': ['TV', 'microwave','refrig','telefon','caps','water']
+    }
+    return render(request, 'main/info.html', data)
 
 def weather(request):
     object = location.Location()
@@ -18,20 +20,14 @@ def weather(request):
     
     city_info = {
         'city': city,
-        'temp': res["main"]["temp"],
-        'icon': res["weather"][0]["icon"]
+        'temp': round(res["main"]["temp"]),
+        'icon': res["weather"][0]["icon"],
+        'values': ['TV', 'microwave','refrig','telefon','caps','water']
     }
     
     contex = {'info': city_info}
     
     return render(request, 'main/index.html', contex)
 
-def index(request):
-    data = {
-        'values': ['TV', 'microwave','refrig','telefon','caps','water']
-    }
-    return render(request, 'main/index.html', data)
-
 def about(request):
     return HttpResponse('<h4>Тест - О нас</h4>')
-
