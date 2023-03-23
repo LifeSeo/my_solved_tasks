@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price. Our news{% endblock %}
+
+{% block content %}
+
+<div class="signup">
+
+            <form method="post">
+                {% csrf_token %}
+                  {% for field in form %}
+                  <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% if field.help_text %}
+          
+                    {% endif %}
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+                  {% endfor %}
+               <center> <button class="btn btn-primary me-md-2" type="submit">Sign up</button> </center>
+               
+       
+</div>
+
+
+{% endblock %}
