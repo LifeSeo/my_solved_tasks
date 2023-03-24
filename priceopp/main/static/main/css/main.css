@@ -151,3 +151,7 @@ main .container{
     h1 {
         text-align:center;
     }
+
+label { color: rgb(244, 242, 242);
+        font-weight: normal;
+}

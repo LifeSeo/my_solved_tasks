@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price. Our news{% endblock %}
+
+{% block content %}
+<div class="container">
+  <center><form method="post">
+    {% csrf_token %}
+    <table>
+      <p>{{ form.as_table }}</p>
+      </table><br>
+    <button class="btn btn-primary me-md-2" type="submit">Log In</button></center>
+  </form>
+</div>
+
+{% endblock %}
