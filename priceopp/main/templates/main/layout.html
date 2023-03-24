@@ -12,7 +12,15 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-
+    {% if request.user.is_authenticated %}
+    <div class="login">
+    <li class="last"> {{user.username}} | <a href="{% url 'logout' %}">Logout</a></li>
+    </div>
+    {% else %}
+    <div class="login">
+    <li class="last"><a href="{% url 'signup' %}">Register</a> | <a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    </div>
     <aside>
     <img src="{% static 'main/img/logo.png' %}" alt="logo">
     <span class='logo'>PriceOpp....</span>
@@ -25,7 +33,7 @@
         <a href=""><li>Contacts</li><a>
     </ul>
     </aside>
-
+    
     <main>
     {% block content %}
     {% endblock %}

@@ -155,3 +155,20 @@ main .container{
 label { color: rgb(244, 242, 242);
         font-weight: normal;
 }
+
+.login {
+    color: rgb(244, 242, 242);
+    margin-top: 10px;
+    text-align: right;
+}
+
+.login a {
+    color: rgb(244, 242, 242);
+}
+
+.login a:hover {
+    color: rgb(142, 13, 13);
+    text-decoration: none;
+    transform: scale(1.05);
+
+}
