@@ -172,3 +172,27 @@ label { color: rgb(244, 242, 242);
     transform: scale(1.05);
 
 }
+
+.reset_pass {
+    color: rgb(244, 242, 242);
+    margin-top: 10px;
+    text-align: center
+}
+
+.reset_pass a {
+    color: rgb(244, 242, 242);
+}
+
+.reset_pass a:hover {
+    color: rgb(142, 13, 13);
+    text-decoration: none;
+    transform: scale(1.05);
+
+}
+
+.reset_pass table {
+
+    margin: 0 auto; 
+    width:250px;
+
+}

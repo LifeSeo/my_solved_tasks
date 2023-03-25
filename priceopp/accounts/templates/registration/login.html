@@ -3,13 +3,15 @@
 {% block title %} Find ur best price. Our news{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="login">
   <center><form method="post">
     {% csrf_token %}
     <table>
       <p>{{ form.as_table }}</p>
       </table><br>
-    <button class="btn btn-primary me-md-2" type="submit">Log In</button></center>
+    <button class="btn btn-primary me-md-2" type="submit">Log In</button><br> <br>
+    <a href="{% url "password_reset" %}">Forgot your password?</a>
+  </center>
   </form>
 </div>
 
