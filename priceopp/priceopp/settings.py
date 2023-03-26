@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -120,10 +121,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "supp0rt.priceopp@yandex.ru"
-EMAIL_HOST_PASSWORD = "xxxxxxxxxxxxxxxxx"
+EMAIL_HOST_PASSWORD = "xxxxxxxxxxxxxxxx"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 LOGIN_REDIRECT_URL = 'home'
+
+RECAPTCHA_PUBLIC_KEY = '6LcDzzElAAAAALUNHsPbkBRuAadOVbvaD1lePLbI'
+RECAPTCHA_PRIVATE_KEY = '6LcDzzElAAAAALwjVgYwUwtjkxG_7N34xT3qyaXq'
+
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
+CAPTCHA_IMAGE_SIZE = (187, 41)
+CAPTCHA_FONT_SIZE = (24)
+CAPTCHA_BACKGROUND_COLOR = '#cccccc'
+CAPTCHA_FOREGROUND_COLOR = '#001100'
+CAPTCHA_LENGTH = 8
