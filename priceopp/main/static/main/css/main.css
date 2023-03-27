@@ -202,3 +202,13 @@ label { color: rgb(244, 242, 242);
     margin: 0 auto; 
     width:250px;
     }
+
+main .formedit{
+    margin: 0 0 0 auto;
+    width:1000px;
+    }
+
+.button {
+    height: 50px;
+    text-align: center;
+    }

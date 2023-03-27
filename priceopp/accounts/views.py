@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from .forms import SignupForm
+from .forms import SignupForm, UserCreationForm, UserEditForm, ProfileEditForm
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -10,6 +10,8 @@ from .tokens import account_activation_token
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
+from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
 
 
 def signup(request):
@@ -54,3 +56,21 @@ def activate(request, uidb64, token):
     else:
         rendered = render_to_string('accounts/activation_invalid.html')
         return HttpResponse(rendered)
+
+@login_required
+def edit(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(instance=request.user, data=request.POST)
+        profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return render(request,
+                      'accounts/edit_ready.html')
+    else:
+        user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(instance=request.user.profile)
+        return render(request,
+                      'accounts/edit.html',
+                      {'user_form': user_form,
+                       'profile_form': profile_form})
