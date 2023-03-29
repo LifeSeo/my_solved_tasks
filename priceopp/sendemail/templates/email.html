@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price. Our news{% endblock %}
+
+{% block content %}
+<h1>Have a question? Write to us:</h1>
+    <p>You can send your message here:</p>
+    
+<div class="formedit">
+
+    <form action="." method="post" enctype="multipart/form-data">
+        <table>
+        {{ form }}
+        {% csrf_token %}</table>
+        
+        </div>
+        <div class="button">
+            <button class="btn btn-primary me-md-2" type="submit">Send</button>
+        </div>
+        
+    </form>
+              
+
+{% endblock %}

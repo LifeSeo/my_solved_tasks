@@ -9,4 +9,5 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('accounts/', include('accounts.urls')),
     path('reviews/', include('reviews.urls')),
+    path('sendemail/', include('sendemail.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
