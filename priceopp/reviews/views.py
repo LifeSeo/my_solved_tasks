@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Reviews
 from .forms import ReviewForm
+from django.contrib.auth.decorators import login_required
 
 # def reviews(request):
 #     reviews = Reviews.objects.all()
 #     return render(request, 'reviews/reviews.html', {'reviews': reviews})
 
+@login_required
 def reviews(request):
     error = ''
     if request.method == 'POST':
