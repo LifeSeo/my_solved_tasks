@@ -10,5 +10,5 @@ class Reviews(models.Model):
 
 
     class Meta:
-        verbose_name = 'New'
-        verbose_name_plural = 'News'
+        verbose_name = 'Reviews'
+        verbose_name_plural = 'Reviews'
