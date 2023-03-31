@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'captcha',
     'django.contrib.postgres',
     'bootstrap3',
+    'sendemail',
 ]
 
 MIDDLEWARE = [

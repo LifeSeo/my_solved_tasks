@@ -3,6 +3,7 @@ from .models import Articles
 from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 def news_home(request):
     news = Articles.objects.order_by('date')[:3]
@@ -25,3 +26,5 @@ class Search(ListView):
             Q(title__icontains=query) | Q(full_article__icontains=query)
         )
         return object_list
+    
+
