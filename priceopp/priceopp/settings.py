@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'captcha',
-    'sendemail.apps.SendemailConfig',
+    'django.contrib.postgres',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
