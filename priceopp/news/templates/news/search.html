@@ -33,7 +33,7 @@
         <div class="search">
         {% for news in object_list %}
     <li>
-      <p>{{ news.title }}, {{ news.full_article }}
+      <p>{{ news.title|safe }}, {{ news.full_article|safe }}
     </li>
   {% endfor %}</p>
   <div class="row">

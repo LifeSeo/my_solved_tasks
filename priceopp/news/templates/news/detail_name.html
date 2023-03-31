@@ -5,9 +5,9 @@
 {% block content %}
 
 <div class="fullarticle">
-  <h1>{{article.title}}</h1>
-  <p>{{article.full_article}}</p>
-  <p>{{article.date}}</p>
+  <h1>{{article.title|safe }}</h1>
+  <p>{{article.full_article|safe }}</p>
+  <p>{{article.date|safe }}</p>
 </div>
 
 {% endblock %}

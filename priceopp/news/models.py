@@ -1,4 +1,5 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 class Articles(models.Model):
     title = models.CharField('Title', max_length=80)
@@ -13,3 +14,6 @@ class Articles(models.Model):
     class Meta:
         verbose_name = 'New'
         verbose_name_plural = 'News'
+        
+    anons = CKEditor5Field(max_length=500, verbose_name='Краткое описание', config_name='extends')
+    full_article = CKEditor5Field(verbose_name='Полное описание', config_name='extends')

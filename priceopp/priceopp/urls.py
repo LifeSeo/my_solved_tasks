@@ -10,4 +10,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('reviews/', include('reviews.urls')),
     path('sendemail/', include('sendemail.urls')),
+    path('ckeditor5/', include('django_ckeditor_5.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

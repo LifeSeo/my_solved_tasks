@@ -13,8 +13,8 @@
 
         <div class="search">
           {% for el in news %}
-  <h3><p>{{ el.title }}</p></h3>
-  <p>{{ el.anons }}</p>
+  <h3><p>{{ el.title|safe }}</p></h3>
+  <p>{{ el.anons|safe }}</p>
           <div class="button">
   <a href="{% url 'news-detail' el.id %}" class="btn btn-outline-secondary">Read more</a>
   </div>{% endfor %}
