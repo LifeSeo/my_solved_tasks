@@ -7,12 +7,15 @@ from .models import Profile
 
 class SignupForm(UserCreationForm):
     email = forms.EmailField(max_length=2000, help_text='Required')
+    telegramm = forms.CharField(required=True, label="Your telegramm")
+    description = forms.CharField(required=True, label="Description")
+    url = forms.URLField(required=True, label="Your URL")
     captcha = CaptchaField(label='Are you an human? ')
     
   
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2', 'telegramm', 'url', 'description',)
         
 class UserEditForm(forms.ModelForm):
     class Meta:
@@ -24,3 +27,4 @@ class ProfileEditForm(forms.ModelForm):
         model = Profile
         fields = ('user', 'data_of_birth',  'photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'telegramm', 'description')
         
+    
