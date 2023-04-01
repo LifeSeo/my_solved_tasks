@@ -224,4 +224,13 @@ main .formedit{
        }
        
 
- 
+h3 {
+    color: #faf4f4;
+    text-align: center;
+    }
+
+.profile {
+    margin: 0 auto; 
+    width:250px;
+    
+    }

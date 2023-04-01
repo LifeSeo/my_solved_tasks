@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 class Profile(models.Model):
@@ -15,3 +16,6 @@ class Profile(models.Model):
     
     def __str__(self) -> str:
         return 'Profile for user {}'.format(self.user.username)
+    
+    description = CKEditor5Field(verbose_name='Полное описание', config_name='extends')
+

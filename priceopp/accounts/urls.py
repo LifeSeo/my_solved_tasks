@@ -18,4 +18,6 @@ urlpatterns = [
     path('password_reset_complete/', PasswordResetCompleteView.as_view(template_name = 'registration/password_reset_complete.html'), name='password_reset_complete'),
     path(r'captcha/', include('captcha.urls')),
     path('edit/', views.edit, name='edit'),
+    path('profile/<str:username>/', views.get_user_profile),
+    path('profile/not_exist/', views.get_user_profile),
 ]

@@ -12,6 +12,7 @@ from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
+from .models import Profile
 
 
 def signup(request):
@@ -74,3 +75,10 @@ def edit(request):
                       'accounts/edit.html',
                       {'user_form': user_form,
                        'profile_form': profile_form})
+        
+def get_user_profile(request, username=None):
+    if User.objects.filter(username=username):
+        user = User.objects.get(username=username)
+        return render(request, 'registration/user_profile.html', {"user":user})
+    else:
+        return render(request, 'registration/not_exist.html')

@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price. Our news{% endblock %}
+
+{% block content %}
+<h3>Profile, Username: {{ user.username }}</h3>
+
+    <div class="profile">
+
+  <p> 
+
+    Full name: {{ user.get_full_name }}<br>
+    
+    Groupe: {{ user.groups.all.0 }}<br>
+    
+    Emai: {{ user.email }}<br>
+    
+    Last login: {{ user.last_login }}<br>
+
+    Date joined: {{ user.date_joined }}  <br>
+    {{ user.description }}
+    <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a>
+       
+{% endblock %}
