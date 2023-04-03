@@ -18,7 +18,7 @@
     Last login: {{ user.last_login }}<br>
 
     Date joined: {{ user.date_joined }}  <br>
-    {{ user.description }}
+
     <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a>
-       
+  </p>
 {% endblock %}

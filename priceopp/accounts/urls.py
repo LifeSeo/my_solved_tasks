@@ -6,6 +6,7 @@ from django.contrib.auth.views import PasswordResetConfirmView
 from django.contrib.auth.views import PasswordResetDoneView
 from django.contrib.auth.views import PasswordResetCompleteView
 from . import views
+from .views import*
 
 urlpatterns = [
     path('', views.signup, name='signup'),
@@ -19,5 +20,5 @@ urlpatterns = [
     path(r'captcha/', include('captcha.urls')),
     path('edit/', views.edit, name='edit'),
     path('profile/<str:username>/', views.get_user_profile),
-    path('profile/not_exist/', views.get_user_profile),
+ 
 ]

@@ -12,8 +12,10 @@
         <table>
         {{ user_form | safe }}
         {{ profile_form | safe}}
-        {% csrf_token %}</table>
-        
+        {% csrf_token %}        
+        {{ form.media }}
+        {{ form }}</table>
+
         </div>
         <div class="button">
             <button class="btn btn-primary me-md-2" type="submit">Save changes</button>

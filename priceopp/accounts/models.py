@@ -1,6 +1,9 @@
 from django.db import models
 from django.conf import settings
 from django_ckeditor_5.fields import CKEditor5Field
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
@@ -19,3 +22,7 @@ class Profile(models.Model):
     
     description = CKEditor5Field(verbose_name='Полное описание', config_name='extends')
 
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
