@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from PIL import Image
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 class Profile(models.Model):
@@ -16,7 +17,7 @@ class Profile(models.Model):
     photo_4 = models.ImageField(null=True, blank=True, upload_to="images/profile/")
     photo_5 = models.ImageField(null=True, blank=True, upload_to="images/profile/")
     telegramm = models.CharField(max_length=50, null=True, blank=True)
-    description = models.TextField(max_length=500, null=True, blank=True)
+    description = CKEditor5Field(verbose_name='Описание', config_name='extends')
     avatar = models.ImageField(
         default='avatar.jpg', # default avatar
         upload_to='profile_avatars' # dir to store the image
