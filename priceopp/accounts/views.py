@@ -15,6 +15,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.views.generic.detail import DetailView
 from django.shortcuts import get_object_or_404
+from django.views import View
 
 def signup(request):
     if request.method == 'POST':
@@ -80,18 +81,24 @@ def edit(request):
 def get_user_profile(request, username=None):
     if User.objects.filter(username=username):
         user = User.objects.get(username=username)
-        return render(request, 'registration/user_profile.html')
+        avatar = request.user.profile.avatar
+        description = user.profile.description
+        telegramm = user.profile.telegramm
+        
+        fields = {
+            'user':user,
+            'avatar':avatar,
+            'description':description,
+            'telegramm':telegramm
+        }
+        
+        context = {'fields':fields}
+        
+        return render(request, 'registration/user_profile.html', context)
         
     else:
         return render(request, 'registration/not_exist.html')
     
-class ShowProfilePageView(DetailView):
-    model = Profile
-    template_name = 'registration/user_profile.html.html'
+    
 
-    def get_context_data(self, *args, **kwargs):
-        users = Profile.objects.all()
-        context = super(ShowProfilePageView, self).get_context_data(*args, **kwargs)
-        page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
-        context['page_user'] = page_user
-        return context
+

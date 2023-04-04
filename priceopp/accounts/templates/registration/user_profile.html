@@ -8,17 +8,27 @@
     <div class="profile">
 
   <p> 
-
+    {% if user.profile.avatar.url == None %}
+    <img src="DEFAULT_IMAGE" />
+{% else %}
+<img src="{{ user.profile.avatar.url }}" alt="" width="80px" height="80px">
+{% endif %}
+  
+ <br>
     Full name: {{ user.get_full_name }}<br>
     
     Groupe: {{ user.groups.all.0 }}<br>
     
     Emai: {{ user.email }}<br>
+
+    Telegramm:  {{ user.profile.telegramm }}<br>
     
     Last login: {{ user.last_login }}<br>
 
-    Date joined: {{ user.date_joined }}  <br>
+    Date joined: {{ user.date_joined }}  <br><br>
 
-    <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a>
+    Description:  {{ user.profile.description | safe }}
+
+    {% comment %} <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a> {% endcomment %}
   </p>
 {% endblock %}
