@@ -3,31 +3,31 @@
 {% block title %} Find ur best price. Our news{% endblock %}
 
 {% block content %}
-<h3>Profile, Username: {{ user.username }}</h3>
+<h3>Profile, Username: {{ fields.user }}</h3>
 
     <div class="profile">
 
   <p> 
-    {% if user.profile.avatar.url == None %}
+    {% if fields.user.profile.avatar.url == None %}
     <img src="DEFAULT_IMAGE" />
 {% else %}
-<img src="{{ user.profile.avatar.url }}" alt="" width="80px" height="80px">
+<img src="{{ fields.user.profile.avatar.url }}" alt="" width="80px" height="80px">
 {% endif %}
   
  <br>
-    Full name: {{ user.get_full_name }}<br>
+    Full name: {{ fields.user.get_full_name }}<br>
     
-    Groupe: {{ user.groups.all.0 }}<br>
+    Groupe: {{ fields.user.groups.all.0 }}<br>
     
-    Emai: {{ user.email }}<br>
+    Emai: {{ fields.user.email }}<br>
 
-    Telegramm:  {{ user.profile.telegramm }}<br>
+    Telegramm:  {{ fields.user.profile.telegramm }}<br>
     
-    Last login: {{ user.last_login }}<br>
+    Last login: {{ fields.user.last_login }}<br>
 
-    Date joined: {{ user.date_joined }}  <br><br>
+    Date joined: {{ fields.user.date_joined }}  <br><br>
 
-    Description:  {{ user.profile.description | safe }}
+    Description:  {{ fields.user.profile.description | safe }}
 
     {% comment %} <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a> {% endcomment %}
   </p>
