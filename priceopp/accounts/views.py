@@ -16,6 +16,8 @@ from .models import Profile
 from django.views.generic.detail import DetailView
 from django.shortcuts import get_object_or_404
 from django.views import View
+from django.views.generic import ListView
+from django.db.models import Q
 
 def signup(request):
     if request.method == 'POST':
@@ -77,7 +79,7 @@ def edit(request):
                       'accounts/edit.html',
                       {'user_form': user_form,
                        'profile_form': profile_form})
-        
+@login_required       
 def get_user_profile(request, username=None):
     if User.objects.filter(username=username):
         user = User.objects.get(username=username)
@@ -99,6 +101,20 @@ def get_user_profile(request, username=None):
     else:
         return render(request, 'registration/not_exist.html')
     
+      
+class SearchProfile(ListView):
+    model = Profile
+    paginate_by = 1
+    template_name = 'accounts/profile.html'
     
-
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        if not query :
+            query = ""
+        object_list = Profile.objects.filter(
+            Q(description__icontains=query) |
+            Q(user__username__icontains=query) |
+            Q(avatar__icontains=query)).order_by('-id').distinct()
+        
+        return object_list
 

@@ -20,5 +20,6 @@ urlpatterns = [
     path(r'captcha/', include('captcha.urls')),
     path('edit/', views.edit, name='edit'),
     path('profile/<str:username>/', views.get_user_profile),
+    path('profile/', SearchProfile.as_view(template_name='accounts/profile.html'), name='user_search'),
  
 ]

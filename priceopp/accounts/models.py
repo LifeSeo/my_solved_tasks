@@ -19,8 +19,8 @@ class Profile(models.Model):
     telegramm = models.CharField(max_length=50, null=True, blank=True)
     description = CKEditor5Field(verbose_name='Описание', config_name='extends')
     avatar = models.ImageField(
-        default='avatar.jpg', # default avatar
-        upload_to='profile_avatars' # dir to store the image
+        default='avatar.jpg',
+        upload_to='profile_avatars'
     )
     
     def __str__(self) -> str:

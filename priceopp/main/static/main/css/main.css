@@ -238,3 +238,21 @@ h3 {
 .ck.ck-editor {
     color: black !important;
     }
+
+main .profilesearch{
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 250;
+    width: auto;
+    margin-left: 200;
+    margin-right: auto;
+    border-radius: 10px;
+    }
+
+    .search .fa-search{
+
+        position: absolute;
+        margin: 40px;
+        top: 120px;
+        left: 16px;
+    }
