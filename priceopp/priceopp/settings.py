@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'sendemail',
     'ckeditor_uploader',
     'django_ckeditor_5',
+    'rating.apps.RatingConfig'
 ]
 
 MIDDLEWARE = [

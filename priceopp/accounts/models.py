@@ -6,7 +6,8 @@ from django.dispatch import receiver
 from django.contrib.auth.models import User
 from PIL import Image
 from django_ckeditor_5.fields import CKEditor5Field
-
+from django.contrib.contenttypes.fields import GenericRelation
+from rating.models import Rating
 
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -22,21 +23,18 @@ class Profile(models.Model):
         default='avatar.jpg',
         upload_to='profile_avatars'
     )
+    ratings = GenericRelation(Rating)
     
     def __str__(self) -> str:
         return 'Profile for user {}'.format(self.user.username)
     
     def save(self, *args, **kwargs):
-        # save the profile first
         super().save(*args, **kwargs)
 
-        # resize the image
         img = Image.open(self.avatar.path)
         if img.height > 300 or img.width > 300:
             output_size = (300, 300)
-            # create a thumbnail
             img.thumbnail(output_size)
-            # overwrite the larger image
             img.save(self.avatar.path)
     
     description = CKEditor5Field(verbose_name='Полное описание', config_name='extends')

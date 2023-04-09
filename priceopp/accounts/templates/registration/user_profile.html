@@ -1,9 +1,16 @@
 {% extends 'main/layout.html' %}
+{% load rating_tags %}
+{% render_rating_import %}
 
 {% block title %} Find ur best price. Our news{% endblock %}
 
 {% block content %}
 <h3>Profile, Username: {{ fields.user }}</h3>
+
+<center>{% render_rating request obj=fields.user settings_slug='default-config' %}
+{% render_rating_info request=request obj=fields.user settings_slug='default-config' %}</center>
+
+{% render_rating_import %}
 
     <div class="profile">
 
@@ -28,6 +35,13 @@
     Date joined: {{ fields.user.date_joined }}  <br><br>
 
     Description:  {{ fields.user.profile.description | safe }}
+
+    {% comment %} {% render_rating request=request obj=fields.user settings_slug='default-config' %} {% endcomment %}
+    
+    {% comment %} {% render_rating request=request obj=fields.user settings_slug='like-config' %} {% endcomment %}
+    {% comment %} {% render_rating_info request=request obj=fields.user settings_slug='like-config' custom_template='rating/rating/rating_info.html' %}
+     {% endcomment %}
+    {% render_rating_script %}
 
     {% comment %} <a class="nav-link" href="{{ request.user.username }}">{{ user.username }}</a> {% endcomment %}
   </p>
