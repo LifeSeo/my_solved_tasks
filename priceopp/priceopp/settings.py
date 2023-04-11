@@ -30,13 +30,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'captcha',
     'django.contrib.postgres',
     'bootstrap3',
     'sendemail',
     'ckeditor_uploader',
     'django_ckeditor_5',
-    'rating.apps.RatingConfig'
+    'rating.apps.RatingConfig',
+    'easy_thumbnails',
+    'newsletter',
+    'django_crontab',
+    "django_cron",
+    'rest_framework',
+    
 ]
 
 MIDDLEWARE = [
@@ -49,7 +56,24 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CRONJOBS = [
+('*/5 * * * *', 'newsletter.cron.submit_newsletter')
+]
+
 ROOT_URLCONF = 'priceopp.urls'
+
+NEWSLETTER_THUMBNAIL = 'easy-thumbnails'
+NEWSLETTER_CONFIRM_EMAIL = False
+SITE_ID = 1
+
+# Amount of seconds to wait between each email. Here 100ms is used.
+NEWSLETTER_EMAIL_DELAY = 0.1
+
+# Amount of seconds to wait between each batch. Here one minute is used.
+NEWSLETTER_BATCH_DELAY = 60
+
+# Number of emails in one batch
+NEWSLETTER_BATCH_SIZE = 100
 
 TEMPLATES = [
     {
