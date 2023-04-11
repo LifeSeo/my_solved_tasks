@@ -31,3 +31,8 @@ def weather(request):
 
 def about(request):
     return HttpResponse('<h4>Тест - О нас</h4>')
+
+
+def subscribe(request):
+    pass
+    return render(request, 'main/subscribe.html',)

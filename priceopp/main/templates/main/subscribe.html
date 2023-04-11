@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price for {% lorem 2 w random %}  {% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8">
+        <div class="login">
+          <center><li class="last"><a href="{% url 'home' %}">Global search</a></li>
+          </center><br>
+          </div>
+          <center><form enctype="multipart/form-data" method="post" action="/newsletter/test3/subscribe/">
+            {% csrf_token %}
+            <label for="id_email_field">E-mail:</label> <input type="email" name="email_field" required="" id="id_email_field">
+            <button id="id_submit" name="submit" value="Subscribe" type="submit">Subscribe</button>
+            </form></center>
+        <div class="gcse-search"></div>
+          
+        </div>
+          
+      </div>
+      
+    </div>
+</div>
+ 
+</div><br>
+
+<p>Главная страница</p>
+{% endblock %}
