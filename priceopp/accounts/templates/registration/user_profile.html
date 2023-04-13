@@ -1,4 +1,5 @@
 {% extends 'main/layout.html' %}
+{% load  static %}
 {% load rating_tags %}
 {% render_rating_import %}
 
@@ -17,10 +18,15 @@
   <p> 
     {% if fields.user.profile.avatar.url == None %}
     <img src="DEFAULT_IMAGE" />
-{% else %}
-<img src="{{ fields.user.profile.avatar.url }}" alt="" width="80px" height="80px">
-{% endif %}
-  
+    {% else %}
+    <img src="{{ fields.user.profile.avatar.url }}" alt="" width="80px" height="80px">
+    {% endif %}<br><br>
+
+    {% if fields.user.profile.premium == None %}
+    VIP STATUS: <img src="{{ fields.user.profile.premium.url }}" alt="" width="20px" height="20px">
+    {% else %}
+    VIP STATUS: <img src="{{ fields.user.profile.premium.url }}" alt="" width="23px" height="23px">
+    {% endif %}
  <br>
     Full name: {{ fields.user.get_full_name }}<br>
     

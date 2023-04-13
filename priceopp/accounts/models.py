@@ -19,6 +19,10 @@ class Profile(models.Model):
     photo_5 = models.ImageField(null=True, blank=True, upload_to="images/profile/")
     telegramm = models.CharField(max_length=50, null=True, blank=True)
     description = CKEditor5Field(verbose_name='Описание', config_name='extends')
+    premium = models.ImageField(
+        default='none_status.png',
+        upload_to='profile_avatars'
+    )
     avatar = models.ImageField(
         default='avatar.jpg',
         upload_to='profile_avatars'

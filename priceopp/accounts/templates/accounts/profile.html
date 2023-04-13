@@ -1,5 +1,6 @@
 
 {% extends 'main/layout.html' %}
+{% load  static %}
 
 {% block title %} Find ur best price for {% lorem 2 w random %}  {% endblock %}
 
@@ -27,6 +28,10 @@
             <p><a class="nav-link" href="{{ i.user.username }}">View full profile</a></p><br>          
     </li>
 
+      <a class="btn btn-primary btn-sm"
+        href="https://commerce.coinbase.com/checkout/31b51735-e0fc-4d70-9d64-90d59fce141a">
+        Buy Premium
+      </a><p><img src="{% static 'main/img/premium.png' %}" alt="Premiem" width="30px" height="30px"><br></p>
     {% endfor %}
       <p><a class="nav-link" href="{% url "user_search" %}">Find other user</a> ----- <p><a class="nav-link" href="{% url "home" %}">Go to the main page</a></p></p>
     {% endblock %}
