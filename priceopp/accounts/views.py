@@ -14,7 +14,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.views.generic.detail import DetailView
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.views import View
 from django.views.generic import ListView
 from django.db.models import Q
@@ -39,6 +39,7 @@ def signup(request):
             email.send()
             rendered = render_to_string('accounts/confirm.html')
             return HttpResponse(rendered)
+        
     
     else:
         form = SignupForm()

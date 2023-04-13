@@ -56,9 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CRONJOBS = [
-('*/5 * * * *', 'newsletter.cron.submit_newsletter')
-]
+
 
 ROOT_URLCONF = 'priceopp.urls'
 
