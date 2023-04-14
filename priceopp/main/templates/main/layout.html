@@ -14,7 +14,15 @@
 <body>
     {% if request.user.is_authenticated %}
     <div class="login">
-    <li class="last"> {{user.username}} | <a href="{% url 'edit' %}">Edit Profile</a> | <a href="{% url 'logout' %}">Logout</a></li>
+    <li class="last"> {{user.username}} | <a href="{% url 'edit' %}">Edit Profile</a> | <a href="{% url 'logout' %}">Logout</a></li>|
+    {% if request.user.groups.all != "VIP" %}
+    <a class="" 
+    href="https://commerce.coinbase.com/checkout/31b51735-e0fc-4d70-9d64-90d59fce141a">
+    Buy Premium &nbsp;&nbsp;
+  </a>
+    {% else %}
+    VIP: <img src="{{ fields.user.profile.premium.url }}" alt="" width="23px" height="23px"> &nbsp;&nbsp;
+    {% endif %}
     </div>
     {% else %}
     <div class="login">

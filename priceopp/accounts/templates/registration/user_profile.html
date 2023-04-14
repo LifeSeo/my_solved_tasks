@@ -22,10 +22,10 @@
     <img src="{{ fields.user.profile.avatar.url }}" alt="" width="80px" height="80px">
     {% endif %}<br><br>
 
-    {% if fields.user.profile.premium == None %}
-    VIP STATUS: <img src="{{ fields.user.profile.premium.url }}" alt="" width="20px" height="20px">
+    {% if fields.user.profile.premium.url == None %}
+    VIP STATUS:<br> <img src="{{ fields.user.profile.premium.url }}" alt="" width="50px" height="50px">
     {% else %}
-    VIP STATUS: <img src="{{ fields.user.profile.premium.url }}" alt="" width="23px" height="23px">
+    VIP STATUS: <br> <img src="{{ fields.user.profile.premium.url }}" alt="" width="30px" height="30px">
     {% endif %}
  <br>
     Full name: {{ fields.user.get_full_name }}<br>

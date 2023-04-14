@@ -105,7 +105,7 @@ def get_user_profile(request, username=None):
       
 class SearchProfile(ListView):
     model = Profile
-    paginate_by = 1
+    paginate_by = 1000
     template_name = 'accounts/profile.html'
     
     def get_queryset(self):

@@ -23,15 +23,9 @@
     <li>
       <h3>User: {{ i.user }}</h3>
       <p><img src="{{ i.avatar.url }}" alt="" width="80px" height="80px"><br></p>
-        <p>{{ i.user }}</p>
-          <p>{{ i.description | safe }}</p>
             <p><a class="nav-link" href="{{ i.user.username }}">View full profile</a></p><br>          
     </li>
-
-      <a class="btn btn-primary btn-sm"
-        href="https://commerce.coinbase.com/checkout/31b51735-e0fc-4d70-9d64-90d59fce141a">
-        Buy Premium
-      </a><p><img src="{% static 'main/img/premium.png' %}" alt="Premiem" width="30px" height="30px"><br></p>
+      
     {% endfor %}
       <p><a class="nav-link" href="{% url "user_search" %}">Find other user</a> ----- <p><a class="nav-link" href="{% url "home" %}">Go to the main page</a></p></p>
     {% endblock %}
