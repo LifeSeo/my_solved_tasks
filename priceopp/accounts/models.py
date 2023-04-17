@@ -40,6 +40,9 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.avatar.path)
+            
+    def get_absolute_url(self):
+        return f'/{self.pk}'
     
     description = CKEditor5Field(verbose_name='Полное описание', config_name='extends')
 

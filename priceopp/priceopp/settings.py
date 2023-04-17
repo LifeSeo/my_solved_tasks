@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'captcha',
     'django.contrib.postgres',
     'bootstrap3',
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'priceopp.urls'
 
 NEWSLETTER_THUMBNAIL = 'easy-thumbnails'
 NEWSLETTER_CONFIRM_EMAIL = False
-SITE_ID = 1
+SITE_ID = 5
 
 # Amount of seconds to wait between each email. Here 100ms is used.
 NEWSLETTER_EMAIL_DELAY = 0.1
