@@ -6,7 +6,7 @@ from django.contrib.sitemaps.views import sitemap
 from news.sitemaps import StaticViewSitemap, DynamicViewSitemap, ProfileViewSitemap
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic.base import TemplateView
-
+from news.feeds import LatestPostsFeed 
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -25,5 +25,6 @@ urlpatterns = [
     path('rating/', include('rating.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+    path('feed/', LatestPostsFeed(), name='post_feed'), 
     path('robots.txt' , include('robots.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
