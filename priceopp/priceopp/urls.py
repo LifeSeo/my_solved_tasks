@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from news.sitemaps import StaticViewSitemap, DynamicViewSitemap, ProfileViewSitemap
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic.base import TemplateView
 
 
 sitemaps = {
@@ -24,4 +25,5 @@ urlpatterns = [
     path('rating/', include('rating.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+    path('robots.txt' , include('robots.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

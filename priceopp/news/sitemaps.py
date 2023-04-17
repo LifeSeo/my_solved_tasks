@@ -8,7 +8,7 @@ class StaticViewSitemap(Sitemap):
     
     changefreq = 'monthly'
     priority = 0.9
-    protocol = 'https'
+    protocol = 'http'
 
     def items(self):
         return ['news', 'search']
@@ -21,7 +21,7 @@ class DynamicViewSitemap(Sitemap):
     
     changefreq = 'monthly'
     priority = 0.9
-    protocol = 'https'
+    protocol = 'http'
 
     def items(self):
         return Articles.objects.all()
@@ -34,7 +34,7 @@ class ProfileViewSitemap(Sitemap):
     
     changefreq = 'monthly'
     priority = 0.9
-    protocol = 'https'
+    protocol = 'http'
 
     def items(self):
         return Profile.objects.all()

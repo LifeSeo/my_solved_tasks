@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_crontab',
     "django_cron",
     'rest_framework',
+    'robots',
     
 ]
 
