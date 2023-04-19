@@ -1,4 +1,5 @@
 {% load  static %}
+{% load i18n%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,11 +15,11 @@
 <body>
     {% if request.user.is_authenticated %}
     <div class="login">
-    <li class="last"> {{user.username}} | <a href="{% url 'edit' %}">Edit Profile</a> | <a href="{% url 'logout' %}">Logout</a></li>|
+    <li class="last"> {{user.username}} | <a href="{% url 'edit' %}">{% blocktrans %}Edit Profile{% endblocktrans %}</a> | <a href="{% url 'logout' %}">{% blocktrans %}Logout{% endblocktrans %}</a></li>|
     {% if request.user.groups.all != "VIP" %}
     <a class="" 
     href="https://commerce.coinbase.com/checkout/31b51735-e0fc-4d70-9d64-90d59fce141a">
-    Buy Premium &nbsp;&nbsp;
+    {% blocktrans %}Buy Premium{% endblocktrans %} &nbsp;&nbsp;
   </a>
     {% else %}
     VIP: <img src="{{ fields.user.profile.premium.url }}" alt="" width="23px" height="23px"> &nbsp;&nbsp;
@@ -26,20 +27,34 @@
     </div>
     {% else %}
     <div class="login">
-    <li class="last"><a href="{% url 'signup' %}">Register</a> | <a href="{% url 'login' %}">Login</a></li>
+    <li class="last"><a href="{% url 'signup' %}">{% blocktrans %}Register{% endblocktrans %}</a> | <a href="{% url 'login' %}">{% blocktrans %}Login{% endblocktrans %}</a></li>
     {% endif %}
     </div>
     <aside>
     <img src="{% static 'main/img/logo.png' %}" alt="logo">
     <span class='logo'>PriceOpp....</span>
-    <h4>Find:</h4>
+    <h4>{% blocktrans %}Language:{% endblocktrans %}</h4>
+    
+    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <select name="language">
+           {% get_current_language as LANGUAGE_CODE %}
+           {% get_available_languages as LANGUAGES %}
+           {% get_language_info_list for LANGUAGES as languages %}
+           {% for language in languages %}
+             <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                 {{ language.name_local }} ({{ language.code }})
+             </option>
+           {% endfor %}
+        </select>
+        <input type="submit" value="Go">
+    </form><br>
     <ul>
-        <a href="{% url 'home' %}"><li>Home</li><a>
-        <a href="{% url 'about' %}"><li>About</li><a>
-        <a href="{% url 'news' %}"><li>News</li><a>
-        <a href="{% url 'reviews' %}"><li>Reviews</li><a>
-        <a href="{% url 'sendemail' %}"><li>Contacts</li><a>
-        <a href="{% url 'user_search' %}"><li>Profiles</li><a>
+        <a href="{% url 'home' %}"><li>{% blocktrans %}Home{% endblocktrans %}</li><a>
+        <a href="{% url 'about' %}"><li>{% blocktrans %}About{% endblocktrans %}</li><a>
+        <a href="{% url 'news' %}"><li>{% blocktrans %}News{% endblocktrans %}</li><a>
+        <a href="{% url 'reviews' %}"><li>{% blocktrans %}Reviews{% endblocktrans %}</li><a>
+        <a href="{% url 'sendemail' %}"><li>{% blocktrans %}Contacts{% endblocktrans %}</li><a>
+        <a href="{% url 'user_search' %}"><li>{% blocktrans %}Profiles{% endblocktrans %}</li><a>
         <a href="{% url 'post_feed' %}"><li>RSS</li><a>
     </ul>
     </aside>

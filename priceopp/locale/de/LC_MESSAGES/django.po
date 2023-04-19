@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-19 14:18+0300\n"
+"PO-Revision-Date: 2023-04-19 11:34:34\n"
+"Last-Translator: Server <supp0rt.priceopp@yandex.ru>\n"
+"Language-Team: English <supp0rt.priceopp@yandex.ru>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\main\templates\main\index.html:15
+msgid "Global search"
+msgstr "Suche im Internet"
+
+#: .\main\templates\main\index.html:15
+msgid "Best wishes search"
+msgstr "Die besten Angebote"
+
+#: .\main\templates\main\index.html:15
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: .\main\templates\main\layout.html:18
+msgid "Edit Profile"
+msgstr "Profil Bearbeiten"
+
+#: .\main\templates\main\layout.html:18
+msgid "Logout"
+msgstr "Abmelden"
+
+#: .\main\templates\main\layout.html:22
+msgid "Buy Premium"
+msgstr "Kaufen Sie Premium"
+
+#: .\main\templates\main\layout.html:30
+msgid "Register"
+msgstr "Registrieren"
+
+#: .\main\templates\main\layout.html:30
+msgid "Login"
+msgstr "Anmelden"
+
+#: .\main\templates\main\layout.html:36
+msgid "Find:"
+msgstr "Finden Sie"
+
+#: .\main\templates\main\layout.html:51
+msgid "Home"
+msgstr "Am Anfang"
+
+#: .\main\templates\main\layout.html:52
+msgid "About"
+msgstr "Über uns"
+
+#: .\main\templates\main\layout.html:53
+msgid "News"
+msgstr "Nachrichten"
+
+#: .\main\templates\main\layout.html:54
+msgid "Reviews"
+msgstr "Bewertungen"
+
+#: .\main\templates\main\layout.html:55
+msgid "Contacts"
+msgstr "Kontakt"
+
+#: .\main\templates\main\layout.html:56
+msgid "Profiles"
+msgstr "Profil"
+
+#~ msgid "English"
+#~ msgstr "Englisch"
+
+#~ msgid "Espanol"
+#~ msgstr "Spanisch"
+
+#~ msgid "German"
+#~ msgstr "Deutsch"

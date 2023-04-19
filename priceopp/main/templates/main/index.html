@@ -1,10 +1,9 @@
 {% extends 'main/layout.html' %}
-
-{% block title %} Find ur best price for {% lorem 2 w random %}  {% endblock %}
+{% load cache %}
+{% load i18n%}
+{% block title %}Find ur best price for {% lorem 2 w random %}  {% endblock %}
 
 {% block content %}
-
-{% load cache %}
 
 {% cache 60 sidebar %}
 <div class="container">
@@ -13,12 +12,12 @@
 
       <div class="col-md-8">
         <div class="login">
-          <center><li class="last"><a href="{% url 'home' %}">Global search</a> | <a href="{% url 'search' %}">Best wishes search</a> | <a href="{% url 'subscribe' %}">Subscribe</a></li>
+          <center><li class="last"><a href="{% url 'home' %}">{% blocktrans %}Global search{% endblocktrans %}</a> | <a href="{% url 'search' %}">{% blocktrans %}Best wishes search{% endblocktrans %}</a> | <a href="{% url 'subscribe' %}">{% blocktrans %}Subscribe{% endblocktrans %}</a></li>
           </center><br>
           </div>
           <script async src="https://cse.google.com/cse.js?cx=37ca4736e78264a95">
-        </script>
-        <div class="gcse-search"></div>
+          </script>
+          <div class="gcse-search"></div>
           
         </div>
         {% endcache %}

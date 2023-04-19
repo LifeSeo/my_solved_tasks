@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 import requests
 from . import location
+from django.utils import translation
+from django.conf import settings
+
 
 def index(request):
     data = {
@@ -36,3 +39,15 @@ def about(request):
 def subscribe(request):
     pass
     return render(request, 'main/subscribe.html',)
+
+def set_language_from_url(request, user_language):
+    translation.activate(user_language)
+    request.session[translation.LANGUAGE_SESSION_KEY] = user_language
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+user_language = 'fr'  # example
+translation.activate(user_language)
+
+# persist using the cookie
+response = HttpResponse(...)
+response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)

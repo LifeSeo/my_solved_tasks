@@ -1,0 +1,84 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: supp0rt.priceopp@yandex.ru\n"
+"POT-Creation-Date: 2023-04-19 11:34:34\n"
+"PO-Revision-Date: 2023-04-19 11:34:34\n"
+"Last-Translator: Server <supp0rt.priceopp@yandex.ru>\n"
+"Language-Team: English <supp0rt.priceopp@yandex.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\main\templates\main\layout.html:38
+msgid "About"
+msgstr "О нас"
+
+#: .\main\templates\main\index.html:19
+msgid "Best wishes search"
+msgstr "Лучшие предложения"
+
+#: .\main\templates\main\layout.html:21
+msgid "Buy Premium"
+msgstr "Купить Премиум"
+
+#: .\main\templates\main\layout.html:41
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\main\templates\main\layout.html:17
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: .\priceopp\settings.py:83
+msgid "English"
+msgstr "Английский"
+
+#: .\priceopp\settings.py:82
+msgid "Espanol"
+msgstr "Испанский"
+
+#: .\main\templates\main\layout.html:35
+msgid "Find:"
+msgstr "Найти"
+
+#: .\priceopp\settings.py:84
+msgid "German"
+msgstr "Немецкий"
+
+#: .\main\templates\main\index.html:19
+msgid "Global search"
+msgstr "Поиск по интернету"
+
+#: .\main\templates\main\layout.html:37
+msgid "Home"
+msgstr "В начало"
+
+#: .\main\templates\main\layout.html:29
+msgid "Login"
+msgstr "Войти"
+
+#: .\main\templates\main\layout.html:17
+msgid "Logout"
+msgstr "Выйти"
+
+#: .\main\templates\main\layout.html:39
+msgid "News"
+msgstr "Новости"
+
+#: .\main\templates\main\layout.html:42
+msgid "Profiles"
+msgstr "Профиль"
+
+#: .\main\templates\main\layout.html:29
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\main\templates\main\layout.html:40
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: .\main\templates\main\index.html:19
+msgid "Subscribe"
+msgstr "Подписаться"

@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     "django_cron",
     'rest_framework',
     'robots',
+    'translation_manager',
     
 ]
 
@@ -58,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 CACHES = {
@@ -73,6 +76,17 @@ NEWSLETTER_THUMBNAIL = 'easy-thumbnails'
 NEWSLETTER_CONFIRM_EMAIL = False
 SITE_ID = 5
 
+USE_I18N = True
+LANGUAGE_CODE = "en"
+LANGUAGES = (
+  ('ru', 'English'),
+  ('es', 'Spanish'),
+    ('de', 'German'),
+)
+USE_L10N = True
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 # Amount of seconds to wait between each email. Here 100ms is used.
 NEWSLETTER_EMAIL_DELAY = 0.1
 
