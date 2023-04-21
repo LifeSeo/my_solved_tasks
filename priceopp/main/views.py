@@ -4,6 +4,7 @@ import requests
 from . import location
 from django.utils import translation
 from django.conf import settings
+from accounts.models import Profile
 
 
 def index(request):
@@ -51,3 +52,9 @@ translation.activate(user_language)
 # persist using the cookie
 response = HttpResponse(...)
 response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+
+def status(request):
+    template_name = 'main/subscribe.html'
+    status = Profile.objects.all()
+    context={'status':status}
+    return render(request,template_name,context)

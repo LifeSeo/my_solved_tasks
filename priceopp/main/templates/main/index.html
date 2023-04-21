@@ -1,11 +1,11 @@
 {% extends 'main/layout.html' %}
-{% load cache %}
+{% comment %} {% load cache %} {% endcomment %}
 {% load i18n%}
 {% block title %}Find ur best price for {% lorem 2 w random %}  {% endblock %}
 
 {% block content %}
 
-{% cache 60 sidebar %}
+{% comment %} {% cache 60 sidebar %} {% endcomment %}
 <div class="container">
 
     <div class="row height d-flex justify-content-center align-items-center">
@@ -20,7 +20,7 @@
           <div class="gcse-search"></div>
           
         </div>
-        {% endcache %}
+        {% comment %} {% endcache %} {% endcomment %}
         <p>{{ info.city }}: {{ info.temp }} <sup>o</sup>  <img src="https://openweathermap.org/img/w/{{info.icon}}.png"  width="31" height="31" > | Date: {% now "jS F Y H:i" %}</p><br>
           
       </div>
