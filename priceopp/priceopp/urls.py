@@ -27,4 +27,5 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('feed/', LatestPostsFeed(), name='post_feed'), 
     path('robots.txt' , include('robots.urls')),
+    path('ysearch/', include('ysearch.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

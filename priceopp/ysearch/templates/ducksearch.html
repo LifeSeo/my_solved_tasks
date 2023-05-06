@@ -1,0 +1,55 @@
+
+{% extends 'main/layout.html' %}
+
+{% block title %} Find ur best price for {% lorem 2 w random %}  {% endblock %}
+
+{% block content %}
+
+
+{% comment %} <div class="container_2">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8">
+
+        <div class="search">
+          <i class="fa fa-search"></i> {% endcomment %}
+          <form method="post" action="">
+            {% csrf_token %}
+            <p>Search:<br> <input name="name"  style="width: 500px; height: 35px;"/><input type="submit"  value="Send" style="height: 35px;"/></p>
+            
+        </form>
+
+<center>
+
+  <table width="80%" style="color: white;">
+    <tbody>
+      <tr>
+        <td>{{ res1|urlize}}<br><br>
+          {{ res2|urlize}}<br><br>
+          {{ res3|urlize}}<br><br>
+          {{ res4|urlize}}<br><br>
+          {{ res5|urlize}}<br><br>
+          {{ res6|urlize}}<br><br>
+          {{ res7|urlize}}<br><br>
+          {{ res8|urlize}}<br><br>
+          {{ res9|urlize}}<br><br>
+          {{ res10|urlize}}<br><br>
+          {{ res11|urlize}}<br><br>
+          {{ res12|urlize}}<br><br>
+          {{ res13|urlize}}<br><br>
+          {{ res14|urlize}}<br><br>
+          {{ res15|urlize}}<br><br>
+          {{ res16|urlize}}<br><br>
+          {{ res17|urlize}}<br><br>
+          {{ res18|urlize}}<br><br>
+          {{ res19|urlize}}<br><br>
+          {{ res20|urlize}}<br><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</center>
+  
+      {% endblock %}
