@@ -95,6 +95,13 @@ def search(request):
     res20 = driver.find_element(By.ID, 'r1-20').text
     res20 = res20.replace(' › ', '/')
     time.sleep(2)
+    res_files = driver.find_elements(By.ID, 'links')
+    
+    for i in range(len(res_files)):
+        data_file = []
+        data_file.append(res_files[i].text)
+        with open(f"ysearch/search/{name}.txt", "a",  encoding='utf-8') as name:
+            name.write(res_files[i].text)
 
     data = {
     'res1' :res1,
@@ -123,4 +130,11 @@ def search(request):
     return render(request, 'ducksearch.html', context=data)
     driver.quit()
 
+
+
+# for i in range(len(res)):
+#         reqres = []
+#         req = res[i].text
+#         reqres.append(req)
+#         print(reqres)
 
