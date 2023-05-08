@@ -4,12 +4,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from transliterate import slugify
 import time
 
 def search(request):
+    alphabet = ["а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","н","о",
+            "п","р","с","т","у","ф","х","ц","ч","ш","щ","ъ","ы","ь","э","ю","я"]
     name = request.POST.get("name")
     if name is None or len(name) == 0:
-        name = 'I Love this site!'
+        name = 'I Love this site'
         
     options = webdriver.ChromeOptions()
     options.headless = True
@@ -97,12 +100,22 @@ def search(request):
     time.sleep(2)
     res_files = driver.find_elements(By.ID, 'links')
     
+    for i in name:
+        name_fin = ''
+        if i in alphabet:
+            name_fin = slugify(name)
+        else:
+            name_fin = name.replace(' ', '-')
+            
     for i in range(len(res_files)):
         data_file = []
-        data_file.append(res_files[i].text)
-        with open(f"ysearch/search/{name}.txt", "a",  encoding='utf-8') as name:
-            name.write(res_files[i].text)
-
+        data_file.append(f'res_files[i].text\n')
+        with open(f"ysearch/search/{name_fin}.html", "a",  encoding='utf-8') as name:
+            name.write(f"<html>\n<head>\n<title> \nOutput Data in an HTML file\n \
+           </title>\n</head> <body> <h1>Welcome to \
+           <font color = #00b300>GeeksforGeeks</font></h1>\n \
+           <h2>A CS Portal for Everyone</h2>\n{res_files[i].text}\n</body></html>")
+            
     data = {
     'res1' :res1,
     'res2' :res2,
