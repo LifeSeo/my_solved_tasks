@@ -5,8 +5,21 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
+from selenium.common.exceptions import NoSuchElementException
 import time
 
+# def try_repeat(func):
+#     def wrapper(*args, **kwargs):
+#         count = 10
+#         while count:
+#             try:
+#                 return func(*args, **kwargs)
+#             except Exception as e:
+#                 print('Error:', e)
+#                 count -= 1
+#     return wrapper
+
+# @try_repeat
 def search(request):
     alphabet = ["а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","н","о",
             "п","р","с","т","у","ф","х","ц","ч","ш","щ","ъ","ы","ь","э","ю","я"]
@@ -31,90 +44,152 @@ def search(request):
     button = driver.find_element(By.ID, 'search_button_homepage')
     button = driver.find_element(By.ID, 'search_button_homepage')
     button.click()
-    time.sleep(10)
+    time.sleep(15)
     button = driver.find_element(By.ID, 'rld-1')
     button.click()
-    time.sleep(5)
+    time.sleep(15)
     button = driver.find_element(By.ID, 'rld-2')
     button.click()
 
-    res1 = driver.find_element(By.ID, 'r1-1').text
-    res1 = res1.replace(' › ', '/')
+    try:
+        res1 = driver.find_element(By.ID, 'r1-1').text
+        res1 = res1.replace(' › ', '/')
+    except NoSuchElementException:
+        res1 = "None"
     time.sleep(2)
-    res2 = driver.find_element(By.ID, 'r1-2').text
-    res2 = res2.replace(' › ', '/')
+    try:
+        res2 = driver.find_element(By.ID, 'r1-2').text
+        res2 = res2.replace(' › ', '/')
+    except NoSuchElementException:
+        res2 = "None"
     time.sleep(2)
-    res3 = driver.find_element(By.ID, 'r1-3').text
-    res3 = res3.replace(' › ', '/')
+    try:
+        res3 = driver.find_element(By.ID, 'r1-3').text
+        res3 = res3.replace(' › ', '/')
+    except NoSuchElementException:
+        res3 = "None"
     time.sleep(2)
-    res4 = driver.find_element(By.ID, 'r1-4').text
-    res4 = res4.replace(' › ', '/')
+    try:
+        res4 = driver.find_element(By.ID, 'r1-4').text
+        res4 = res4.replace(' › ', '/')
+    except NoSuchElementException:
+        res4 = "None"
     time.sleep(2)
-    res5 = driver.find_element(By.ID, 'r1-5').text
-    res5 = res5.replace(' › ', '/')
+    try:
+        res5 = driver.find_element(By.ID, 'r1-5').text
+        res5 = res5.replace(' › ', '/')
+    except NoSuchElementException:
+        res5 = "None"
     time.sleep(2)
-    res6 = driver.find_element(By.ID, 'r1-6').text
-    res6 = res6.replace(' › ', '/')
+    try:
+        res6 = driver.find_element(By.ID, 'r1-6').text
+        res6 = res6.replace(' › ', '/')
+    except NoSuchElementException:
+        res6 = "None"
     time.sleep(2)
-    res7 = driver.find_element(By.ID, 'r1-7').text
-    res7 = res7.replace(' › ', '/')
+    try:
+        res7 = driver.find_element(By.ID, 'r1-7').text
+        res7 = res7.replace(' › ', '/')
+    except NoSuchElementException:
+        res7 = "None"
     time.sleep(2)
-    res8 = driver.find_element(By.ID, 'r1-8').text
-    res8 = res8.replace(' › ', '/')
+    try:
+        res8 = driver.find_element(By.ID, 'r1-8').text
+        res8 = res8.replace(' › ', '/')
+    except NoSuchElementException:
+        res8 = "None"
     time.sleep(2)
-    res9 = driver.find_element(By.ID, 'r1-9').text
-    res9 = res9.replace(' › ', '/')
+    try:
+        res9 = driver.find_element(By.ID, 'r1-9').text
+        res9 = res9.replace(' › ', '/')
+    except NoSuchElementException:
+        res9 = "None"
     time.sleep(2)
-    res10 = driver.find_element(By.ID, 'r1-10').text
-    res10 = res10.replace(' › ', '/')
+    try:
+        res10 = driver.find_element(By.ID, 'r1-10').text
+        res10 = res10.replace(' › ', '/')
+    except NoSuchElementException:
+        res10 = "None"
     time.sleep(2)
-    res11 = driver.find_element(By.ID, 'r1-11').text
-    res11 = res11.replace(' › ', '/')
+    try:
+        res11 = driver.find_element(By.ID, 'r1-11').text
+        res11 = res11.replace(' › ', '/')
+    except NoSuchElementException:
+        res11 = "None"
     time.sleep(2)
-    res12 = driver.find_element(By.ID, 'r1-12').text
-    res12 = res12.replace(' › ', '/')
+    try:
+        res12 = driver.find_element(By.ID, 'r1-12').text
+        res12 = res12.replace(' › ', '/')
+    except NoSuchElementException:
+        res12 = "None"
     time.sleep(2)
-    res13 = driver.find_element(By.ID, 'r1-13').text
-    res13 = res13.replace(' › ', '/')
+    try:
+        res13 = driver.find_element(By.ID, 'r1-13').text
+        res13 = res13.replace(' › ', '/')
+    except NoSuchElementException:
+        res13 = "None"
+    try:
+        res14 = driver.find_element(By.ID, 'r1-14').text
+        res14 = res14.replace(' › ', '/')
+    except NoSuchElementException:
+        res14 = "None"
     time.sleep(2)
-    res14 = driver.find_element(By.ID, 'r1-14').text
-    res14 = res14.replace(' › ', '/')
+    try:
+        res15 = driver.find_element(By.ID, 'r1-15').text
+        res15 = res15.replace(' › ', '/')
+    except NoSuchElementException:
+        res15 = "None"
     time.sleep(2)
-    res15 = driver.find_element(By.ID, 'r1-15').text
-    res15 = res15.replace(' › ', '/')
+    try:
+        res16 = driver.find_element(By.ID, 'r1-16').text
+        res16 = res16.replace(' › ', '/')
+    except NoSuchElementException:
+        res16 = "None"
     time.sleep(2)
-    res16 = driver.find_element(By.ID, 'r1-16').text
-    res16 = res16.replace(' › ', '/')
+    try:
+        res17 = driver.find_element(By.ID, 'r1-17').text
+        res17 = res17.replace(' › ', '/')
+    except NoSuchElementException:
+        res17 = "None"
     time.sleep(2)
-    res17 = driver.find_element(By.ID, 'r1-17').text
-    res17 = res17.replace(' › ', '/')
+    try:
+        res18 = driver.find_element(By.ID, 'r1-18').text
+        res18 = res18.replace(' › ', '/')
+    except NoSuchElementException:
+        res18 = "None"
     time.sleep(2)
-    res18 = driver.find_element(By.ID, 'r1-18').text
-    res18 = res18.replace(' › ', '/')
+    try:
+        res19 = driver.find_element(By.ID, 'r1-19').text
+        res19 = res19.replace(' › ', '/')
+    except NoSuchElementException:
+        res19 = "None"
     time.sleep(2)
-    res19 = driver.find_element(By.ID, 'r1-19').text
-    res19 = res19.replace(' › ', '/')
-    time.sleep(2)
-    res20 = driver.find_element(By.ID, 'r1-20').text
-    res20 = res20.replace(' › ', '/')
+    try:
+        res20 = driver.find_element(By.ID, 'r1-20').text
+        res20 = res20.replace(' › ', '/')
+    except NoSuchElementException:
+        res20 = "None"
     time.sleep(2)
     res_files = driver.find_elements(By.ID, 'links')
     
     for i in name:
         name_fin = ''
-        if i in alphabet:
-            name_fin = slugify(name)
+        if i not in alphabet:
+            name_fin = name.replace(' ', '-') 
         else:
-            name_fin = name.replace(' ', '-')
+            name_fin = slugify(name)
             
     for i in range(len(res_files)):
         data_file = []
-        data_file.append(f'res_files[i].text\n')
+        res_files[i] = res_files[i].text
+        res_files[i] = res_files[i].replace(' › ', '/')
+        data_file.append(f'{res_files[i]}' )
+        
         with open(f"ysearch/search/{name_fin}.html", "a",  encoding='utf-8') as name:
-            name.write(f"<html>\n<head>\n<title> \nOutput Data in an HTML file\n \
+            name.write(f"<html>\n<head>\n<title> \n{name}\n \
            </title>\n</head> <body> <h1>Welcome to \
            <font color = #00b300>GeeksforGeeks</font></h1>\n \
-           <h2>A CS Portal for Everyone</h2>\n{res_files[i].text}\n</body></html>")
+           <h2>A CS Portal for Everyone</h2>\n{data_file[i]}\n</body></html>")
             
     data = {
     'res1' :res1,
