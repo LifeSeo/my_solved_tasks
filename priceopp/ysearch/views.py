@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
+from fpdf import FPDF
 import time
 
 # def try_repeat(func):
@@ -44,12 +45,18 @@ def search(request):
     button = driver.find_element(By.ID, 'search_button_homepage')
     button = driver.find_element(By.ID, 'search_button_homepage')
     button.click()
-    time.sleep(15)
-    button = driver.find_element(By.ID, 'rld-1')
-    button.click()
-    time.sleep(15)
-    button = driver.find_element(By.ID, 'rld-2')
-    button.click()
+    time.sleep(5)
+    try:
+        button = driver.find_element(By.ID, 'rld-1')
+        button.click()
+    except NoSuchElementException:
+        pass
+    time.sleep(5)
+    try:
+        button = driver.find_element(By.ID, 'rld-1')
+        button.click()
+    except NoSuchElementException:
+        pass
 
     try:
         res1 = driver.find_element(By.ID, 'r1-1').text
@@ -172,18 +179,18 @@ def search(request):
     time.sleep(2)
     res_files = driver.find_elements(By.ID, 'links')
     
-    for i in name:
-        name_fin = ''
-        if i not in alphabet:
-            name_fin = name.replace(' ', '-') 
-        else:
+    name_fin = name.replace(' ', '-')
+    
+    for i in name_fin:
+        if i in alphabet:
             name_fin = slugify(name)
-            
+
     for i in range(len(res_files)):
         data_file = []
         res_files[i] = res_files[i].text
         res_files[i] = res_files[i].replace(' › ', '/')
         data_file.append(f'{res_files[i]}' )
+        
         
         with open(f"ysearch/search/{name_fin}.html", "a",  encoding='utf-8') as name:
             name.write(f"<html>\n<head>\n<title> \n{name}\n \
