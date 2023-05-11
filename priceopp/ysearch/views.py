@@ -7,6 +7,8 @@ from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
 from fpdf import FPDF
+import cleantext
+import re
 import time
 
 # def try_repeat(func):
@@ -189,14 +191,21 @@ def search(request):
         data_file = []
         res_files[i] = res_files[i].text
         res_files[i] = res_files[i].replace(' › ', '/')
-        data_file.append(f'{res_files[i]}' )
+        res_files[i] = res_files[i].replace('\n', ' <br><br>')
+        data_file.append(f'{res_files[i]}')        
+        full_list = " ".join(data_file)
         
+        button = '<button onclick="myFunc()">Return and search</button><br> <script>function myFunc() {window.location.href = "http://127.0.0.1:8000";}</script>'
         
         with open(f"ysearch/search/{name_fin}.html", "a",  encoding='utf-8') as name:
-            name.write(f"<html>\n<head>\n<title> \n{name}\n \
-           </title>\n</head> <body> <h1>Welcome to \
-           <font color = #00b300>GeeksforGeeks</font></h1>\n \
-           <h2>A CS Portal for Everyone</h2>\n{data_file[i]}\n</body></html>")
+            
+            name.write(f'<html>\n<head>\n<title> \n{name}\n \
+           </title>\n</head>  <body> <h1><font color = #FFFFFF>Welcome to</font> \
+           <font color = #00b300>our Search. Return and search"</font></h1>\n \
+            <body bgcolor = "#1d102f">\n \
+            {button}\n \
+           <h2>A CS Portal for Everyone</h2><font color = #FFFFFF>{full_list}</font> \
+           </body></html>')
             
     data = {
     'res1' :res1,
