@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
-from news.sitemaps import StaticViewSitemap, DynamicViewSitemap, ProfileViewSitemap
+from news.sitemaps import StaticViewSitemap, DynamicViewSitemap, ProfileViewSitemap, SearchViewSitemap
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic.base import TemplateView
 from news.feeds import LatestPostsFeed 
@@ -11,7 +11,8 @@ from news.feeds import LatestPostsFeed
 sitemaps = {
     'static': StaticViewSitemap,
     'dynamic': DynamicViewSitemap,
-    'profile': ProfileViewSitemap
+    'profile': ProfileViewSitemap,
+    'search' : SearchViewSitemap
 }
 
 urlpatterns = [

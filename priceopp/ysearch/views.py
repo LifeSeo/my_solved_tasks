@@ -179,14 +179,14 @@ def search(request):
     except NoSuchElementException:
         res20 = "None"
     time.sleep(2)
-    res_files = driver.find_elements(By.ID, 'links')
+    res_files = driver.find_elements(By.ID, 'react-layout')
     
     name_fin = name.replace(' ', '-')
-    
+    print(name_fin)
     for i in name_fin:
         if i in alphabet:
             name_fin = slugify(name)
-
+            
     for i in range(len(res_files)):
         data_file = []
         res_files[i] = res_files[i].text
@@ -206,7 +206,7 @@ def search(request):
             {button}\n \
            <h2>A CS Portal for Everyone</h2><font color = #FFFFFF>{full_list}</font> \
            </body></html>')
-            
+
     data = {
     'res1' :res1,
     'res2' :res2,
