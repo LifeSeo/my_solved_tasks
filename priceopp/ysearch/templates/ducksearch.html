@@ -25,26 +25,10 @@
   <table width="80%" style="color: white;">
     <tbody>
       <tr>
-        <td>{{ res1|urlize}}<br><br>
-          {{ res2|urlize}}<br><br>
-          {{ res3|urlize}}<br><br>
-          {{ res4|urlize}}<br><br>
-          {{ res5|urlize}}<br><br>
-          {{ res6|urlize}}<br><br>
-          {{ res7|urlize}}<br><br>
-          {{ res8|urlize}}<br><br>
-          {{ res9|urlize}}<br><br>
-          {{ res10|urlize}}<br><br>
-          {{ res11|urlize}}<br><br>
-          {{ res12|urlize}}<br><br>
-          {{ res13|urlize}}<br><br>
-          {{ res14|urlize}}<br><br>
-          {{ res15|urlize}}<br><br>
-          {{ res16|urlize}}<br><br>
-          {{ res17|urlize}}<br><br>
-          {{ res18|urlize}}<br><br>
-          {{ res19|urlize}}<br><br>
-          {{ res20|urlize}}<br><br>
+        <td>
+          {% for key, value in dataf.items %}
+          <li>{{value|urlize}}<br><br></li>
+        {% endfor %}
         </td>
       </tr>
     </tbody>

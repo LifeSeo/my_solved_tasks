@@ -64,120 +64,120 @@ def search(request):
         res1 = driver.find_element(By.ID, 'r1-1').text
         res1 = res1.replace(' › ', '/')
     except NoSuchElementException:
-        res1 = "None"
+        res1 = None
     time.sleep(2)
     try:
         res2 = driver.find_element(By.ID, 'r1-2').text
         res2 = res2.replace(' › ', '/')
     except NoSuchElementException:
-        res2 = "None"
+        res2 = None
     time.sleep(2)
     try:
         res3 = driver.find_element(By.ID, 'r1-3').text
         res3 = res3.replace(' › ', '/')
     except NoSuchElementException:
-        res3 = "None"
+        res3 = None
     time.sleep(2)
     try:
         res4 = driver.find_element(By.ID, 'r1-4').text
         res4 = res4.replace(' › ', '/')
     except NoSuchElementException:
-        res4 = "None"
+        res4 = None
     time.sleep(2)
     try:
         res5 = driver.find_element(By.ID, 'r1-5').text
         res5 = res5.replace(' › ', '/')
     except NoSuchElementException:
-        res5 = "None"
+        res5 = None
     time.sleep(2)
     try:
         res6 = driver.find_element(By.ID, 'r1-6').text
         res6 = res6.replace(' › ', '/')
     except NoSuchElementException:
-        res6 = "None"
+        res6 = None
     time.sleep(2)
     try:
         res7 = driver.find_element(By.ID, 'r1-7').text
         res7 = res7.replace(' › ', '/')
     except NoSuchElementException:
-        res7 = "None"
+        res7 = None
     time.sleep(2)
     try:
         res8 = driver.find_element(By.ID, 'r1-8').text
         res8 = res8.replace(' › ', '/')
     except NoSuchElementException:
-        res8 = "None"
+        res8 = None
     time.sleep(2)
     try:
         res9 = driver.find_element(By.ID, 'r1-9').text
         res9 = res9.replace(' › ', '/')
     except NoSuchElementException:
-        res9 = "None"
+        res9 = None
     time.sleep(2)
     try:
         res10 = driver.find_element(By.ID, 'r1-10').text
         res10 = res10.replace(' › ', '/')
     except NoSuchElementException:
-        res10 = "None"
+        res10 = None
     time.sleep(2)
     try:
         res11 = driver.find_element(By.ID, 'r1-11').text
         res11 = res11.replace(' › ', '/')
     except NoSuchElementException:
-        res11 = "None"
+        res11 = None
     time.sleep(2)
     try:
         res12 = driver.find_element(By.ID, 'r1-12').text
         res12 = res12.replace(' › ', '/')
     except NoSuchElementException:
-        res12 = "None"
+        res12 = None
     time.sleep(2)
     try:
         res13 = driver.find_element(By.ID, 'r1-13').text
         res13 = res13.replace(' › ', '/')
     except NoSuchElementException:
-        res13 = "None"
+        res13 = None
     try:
         res14 = driver.find_element(By.ID, 'r1-14').text
         res14 = res14.replace(' › ', '/')
     except NoSuchElementException:
-        res14 = "None"
+        res14 = None
     time.sleep(2)
     try:
         res15 = driver.find_element(By.ID, 'r1-15').text
         res15 = res15.replace(' › ', '/')
     except NoSuchElementException:
-        res15 = "None"
+        res15 = None
     time.sleep(2)
     try:
         res16 = driver.find_element(By.ID, 'r1-16').text
         res16 = res16.replace(' › ', '/')
     except NoSuchElementException:
-        res16 = "None"
+        res16 = None
     time.sleep(2)
     try:
         res17 = driver.find_element(By.ID, 'r1-17').text
         res17 = res17.replace(' › ', '/')
     except NoSuchElementException:
-        res17 = "None"
+        res17 = None
     time.sleep(2)
     try:
         res18 = driver.find_element(By.ID, 'r1-18').text
         res18 = res18.replace(' › ', '/')
     except NoSuchElementException:
-        res18 = "None"
+        res18 = None
     time.sleep(2)
     try:
         res19 = driver.find_element(By.ID, 'r1-19').text
         res19 = res19.replace(' › ', '/')
     except NoSuchElementException:
-        res19 = "None"
+        res19 = None
     time.sleep(2)
     try:
         res20 = driver.find_element(By.ID, 'r1-20').text
         res20 = res20.replace(' › ', '/')
     except NoSuchElementException:
-        res20 = "None"
+        res20 = None
     time.sleep(2)
     res_files = driver.find_elements(By.ID, 'react-layout')
     
@@ -228,17 +228,11 @@ def search(request):
     'res18' :res18,
     'res19' :res19,
     'res20' :res20,
-
      }
     
-    return render(request, 'ducksearch.html', context=data)
-    driver.quit()
+    dataf = {k: v for k, v in data.items() if v!=None}
+    context = {'dataf': dataf}
+    return render(request, 'ducksearch.html', context)
+    # driver.quit()
 
-
-
-# for i in range(len(res)):
-#         reqres = []
-#         req = res[i].text
-#         reqres.append(req)
-#         print(reqres)
 
