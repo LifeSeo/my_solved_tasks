@@ -6,9 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
-from fpdf import FPDF
-import cleantext
-import re
 import time
 
 # def try_repeat(func):
