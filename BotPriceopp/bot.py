@@ -8,7 +8,7 @@ from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
 import time
 
-bot = telebot.TeleBot('6270427871:AAF6D1dlE7YNHxduezlKotd-YtT9FU-4tjI')
+bot = telebot.TeleBot('ххххххххххххххххххх')
 
 @bot.message_handler(commands=['start'])
 def start(message):
