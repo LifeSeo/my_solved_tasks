@@ -32,7 +32,7 @@ def search(request):
         name = 'I Love this site'
         
     options = webdriver.ChromeOptions()
-    # options.headless = True
+    options.headless = True
  
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')

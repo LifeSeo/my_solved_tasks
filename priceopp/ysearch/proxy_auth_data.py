@@ -1,2 +1,2 @@
-login = "7LKm5n"
-password = "yccZJM"
+login = "хххххх"
+password = "ххххххgit
