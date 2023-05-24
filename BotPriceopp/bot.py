@@ -6,9 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
+from fake_useragent import UserAgent
+from proxy_auth import login, password
+from seleniumwire import webdriver
+from token_auth_data import tok
 import time
 
-bot = telebot.TeleBot('ххххххххххххххххххх')
+bot = telebot.TeleBot(tok)
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -25,13 +29,26 @@ def get_user_text(message):
         options.headless = True
     
         options.add_argument('--ignore-certificate-errors')
-        options.add_argument('--ignore-ssl-errors')       
+        options.add_argument('--ignore-ssl-errors')
+        ua = UserAgent()
+        user_agent = ua.random
+        options.add_argument(f'user-agent={user_agent}')     
         options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
-        driver = webdriver.Chrome(chrome_options=options)
+        options_wire = {
+        'proxy': {
+                'https': f'socks5://{login}:{password}@196.17.64.72:8000',
+                'http': f'socks5://{login}:{password}@196.17.64.72:8000',
+                'no_proxy': 'localhost,127.0.0.1'
+            }
+        }
+        driver = webdriver.Chrome(seleniumwire_options=options_wire)
+    
+        # driver = webdriver.Chrome(options=options)
+        print('Start Search, we need 10 sec.....')
         url = 'https://duckduckgo.com/'
         driver.get(url)
     
-        time.sleep(2)
+        time.sleep(10)
         search = driver.find_element(By.ID, 'search_form_input_homepage')
         search.send_keys(message.text)
         button = driver.find_element(By.ID, 'search_button_homepage')
