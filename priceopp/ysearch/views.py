@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from selenium import webdriver
+from seleniumwire import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -7,6 +8,9 @@ from selenium.webdriver.chrome.options import Options
 from transliterate import slugify
 from selenium.common.exceptions import NoSuchElementException
 import time
+from selenium.webdriver import DesiredCapabilities
+from fake_useragent import UserAgent
+from .proxy_auth_data import login, password
 
 # def try_repeat(func):
 #     def wrapper(*args, **kwargs):
@@ -28,17 +32,29 @@ def search(request):
         name = 'I Love this site'
         
     options = webdriver.ChromeOptions()
-    options.headless = True
+    # options.headless = True
  
     options.add_argument('--ignore-certificate-errors')
-    options.add_argument('--ignore-ssl-errors')       
+    options.add_argument('--ignore-ssl-errors')
+    ua = UserAgent()
+    user_agent = ua.random
+    options.add_argument(f'user-agent={user_agent}')     
     options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
-    driver = webdriver.Chrome(chrome_options=options)
+    options_wire = {
+    'proxy': {
+            'https': f'socks5://{login}:{password}@196.17.64.72:8000',
+            'http': f'socks5://{login}:{password}@196.17.64.72:8000',
+            'no_proxy': 'localhost,127.0.0.1'
+        }
+    }
+    driver = webdriver.Chrome(seleniumwire_options=options_wire, options=options)
+    
+    # driver = webdriver.Chrome(options=options)
     print('Start Search, we need 10 sec.....')
     url = 'https://duckduckgo.com/'
     driver.get(url)
    
-    time.sleep(5)
+    time.sleep(10)
     search = driver.find_element(By.ID, 'search_form_input_homepage')
     search.send_keys(name)
     button = driver.find_element(By.ID, 'search_button_homepage')
