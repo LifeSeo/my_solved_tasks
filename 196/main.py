@@ -7,7 +7,6 @@ def heapsort(list1):
    
      sort = []  
    
-     # the elements are lift in the heap  
      while heap:  
          sort.append(heappop(heap))  
    
