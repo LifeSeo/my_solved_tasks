@@ -6,7 +6,11 @@ def heapsort(list1):
          heappush(heap, ele)  
    
      sort = []  
+<<<<<<< HEAD
      
+=======
+   
+>>>>>>> e585649c1de5f07e615b5b9c092809861e53df01
      while heap:  
          sort.append(heappop(heap))  
    
