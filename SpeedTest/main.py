@@ -98,5 +98,6 @@ multa_country_speed = speed_multa_town_country(over_speed_country)
 print("В пригороде штраф составит:", multa_country_speed)
 test_zero_speed(car_speed)
 
+
         
     
